@@ -6,8 +6,8 @@ import {AppBar, Toolbar, Link, Button, Tabs, Tab,  Switch } from '@material-ui/c
 import {FormControlLabel, FormGroup, Typography } from '@material-ui/core'
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 //import {ThemeContext} from '../../context/themeContext';
-import {green} from '@material-ui/core/colors'
 import {withTheme} from '../Theme' 
+import { DesktopWindows } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -118,6 +118,24 @@ const Header = (props) => {
     const classes = useStyles();
     const {darkMode, setDarkMode} = props;
 
+    React.useEffect(()=>{
+      console.log(value)
+      // switch (value) {
+      //   case 1: window.location.pathname = "/p404"
+      //   case 0: window.location.pathname = "/home" 
+      // } 
+      // if (window.location.pathname === "/" && value !== 0){
+      //   setValue(0)
+      // }else if  (window.location.pathname === "/p404" && value !==  1) {
+      //   setValue(1)
+      // }else if  (window.location.pathname === "/about" && value !==  2) {
+      //   setValue(2)
+      // } else if  (window.location.pathname === "/auth" && value !==  3) {
+      //  setValue(3)
+      // }
+
+    }, [value])
+
     const tabs = (
         <Tabs 
           aria-label="tabsPages"
@@ -133,15 +151,15 @@ const Header = (props) => {
             className={classes.tab} 
             selected ={value === 0}
             component={Link}  
-            to='/'
-            label='HOME'
+            Link = '/home'
+            to='/home'
             onClick={()=>setValue(0)} 
         />
         <Tab 
         selected ={value === 1}
         className={classes.tab} 
         component={Link} 
-        to='/Project' 
+        to='/P404' 
         label='ABOUT'
         onClick={()=>setValue(1)}
 
@@ -160,17 +178,17 @@ const Header = (props) => {
           className={classes.tab} 
           component={Link} 
           to='/about' 
-         label ='SERVICES'
-         onClick={()=>setValue(2)}
+          label ='SERVICES'
+          onClick={()=>setValue(2)}
         />
     
         <Tab 
           selected ={value === 3}
           hidden = {false}
-         //hidden={props.isAuth}
-         className={classes.tab} 
-         component={Link} 
-         //to={isAuth ?'/logout' :'/auth'} 
+          //hidden={props.isAuth}
+          className={classes.tab} 
+          component={Link} 
+          //to={isAuth ?'/logout' :'/auth'} 
           label ='OUR PROJECT'
           onClick={()=>setValue(3)}
         />
@@ -178,7 +196,7 @@ const Header = (props) => {
     )
 
      const handleClickNight = (event) =>{
-      console.log('PALITTE', theme.palette);
+      //console.log('PALITTE', theme.palette);
       setDarkMode(!darkMode)}
 
     return (

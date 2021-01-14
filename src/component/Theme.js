@@ -1,6 +1,6 @@
 import React from 'react';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
-import { green, grey, orange } from '@material-ui/core/colors';
+//import { green, grey, orange } from '@material-ui/core/colors';
 
 // const theme = createMuiTheme (
   //   {
@@ -95,3 +95,5 @@ export const withTheme = (Component) => {
     );
   };
 }
+
+export default Theme;
