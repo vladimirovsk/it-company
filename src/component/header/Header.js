@@ -1,13 +1,12 @@
 import React from 'react'
 import { makeStyles, useTheme} from "@material-ui/core/styles";
 import { withStyles } from '@material-ui/core/styles';
-import iconLogo from '../../LogoCompany.png';
-import {AppBar, Toolbar, Link, Button, Tabs, Tab,  Switch } from '@material-ui/core'
+// import iconLogo from '../../LogoCompany.png';
+import {AppBar, Toolbar, Link, Tabs, Tab,  Switch } from '@material-ui/core'
 import {FormControlLabel, FormGroup, Typography } from '@material-ui/core'
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 //import {ThemeContext} from '../../context/themeContext';
 import {withTheme} from '../Theme' 
-import { DesktopWindows } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -119,19 +118,12 @@ const Header = (props) => {
     const {darkMode, setDarkMode} = props;
 
     React.useEffect(()=>{
-      console.log(value)
-      // switch (value) {
-      //   case 1: window.location.pathname = "/p404"
-      //   case 0: window.location.pathname = "/home" 
-      // } 
-      // if (window.location.pathname === "/" && value !== 0){
+      console.log(window.location.pathname,value)
+
+      // if (((window.location.pathname === "/home")||(window.location.pathname === "/")) && value !== 0){
       //   setValue(0)
       // }else if  (window.location.pathname === "/p404" && value !==  1) {
       //   setValue(1)
-      // }else if  (window.location.pathname === "/about" && value !==  2) {
-      //   setValue(2)
-      // } else if  (window.location.pathname === "/auth" && value !==  3) {
-      //  setValue(3)
       // }
 
     }, [value])
@@ -145,6 +137,7 @@ const Header = (props) => {
           indicatorColor="secondary"
           scrollButtons="auto"
           color='primary'
+          height='20px'
           //color='#fafafa'
         >
         <Tab
@@ -153,25 +146,16 @@ const Header = (props) => {
             component={Link}  
             Link = '/home'
             to='/home'
+            label="HOME"
             onClick={()=>setValue(0)} 
         />
         <Tab 
         selected ={value === 1}
         className={classes.tab} 
         component={Link} 
-        to='/P404' 
+        to='/p404' 
         label='ABOUT'
         onClick={()=>setValue(1)}
-
-            //aria-haspopup="true"
-        //      aria-controls="simple-menu"
-            //      aria-owns={anchorEl}
-            //      aria-haspopup={anchorEl ? "true": undefined}
-            //     onMouseOver={(event) => handleClick(event)}
-            //onClick={(event) => handleClick(event)}
-            //icon={<ArrowDropDownIcon/>}
-        //      wrapped={false}
-
         />
         <Tab 
           selected ={value === 2}
@@ -185,7 +169,6 @@ const Header = (props) => {
         <Tab 
           selected ={value === 3}
           hidden = {false}
-          //hidden={props.isAuth}
           className={classes.tab} 
           component={Link} 
           //to={isAuth ?'/logout' :'/auth'} 
@@ -202,14 +185,14 @@ const Header = (props) => {
     return (
         <AppBar position="fixed" className={classes.appbar} color="primary">
             <Toolbar disableGutters={true}>
-            <Button component={Link} to="/" onClick={()=>setSelectedIndex(1)}
+            {/* <Button component={Link} to="/" onClick={()=>setSelectedIndex(1)}
                 disableRipple
                 className={classes.logoContainer}> 
                 <img alt="logo" src={iconLogo} className={`${classes.logoMini} logoMini`} />
             </Button>
              <Typography variant="h6" color="inherit">
                 IT COMPANY
-            </Typography> 
+            </Typography>  */}
             
             {matches ? null : tabs}
             <FormGroup className={classes.tabContainer}>

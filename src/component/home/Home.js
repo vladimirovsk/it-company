@@ -193,16 +193,16 @@ const Home = (props) => {
         <Parallax  pages={3}> {/*ref={ref => (parallax = ref)}*/}
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#242424' }} /> 
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#242424' }} /> 
-         <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage:  url('stars', true), backgroundSize: 'cover' }} />
+         {/* <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage:  url('stars', true), backgroundSize: 'cover' }} /> */}
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
              {/* <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />  */}
-            <img src={logo} alt='' className='App-logo1' style={{ width: '25%', marginLeft: '10%' }} />
+            <img src={logo} alt='' className='App-logo1' style={{ width: '10%', marginLeft: '5%' }} />
             {infoGrid}
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.6, backgroundColor: 'transparent' }}>
           <img src={react} alt='' style={{  display: 'block', backgroundColor: '#transparent', width: '10%', marginLeft: '55%' }} />
-          <img src={nodejs} alt='' style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+          <img src={nodejs} alt='' style={{ display: 'block', width: '10%', marginLeft: '30%' }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.5 }}>
@@ -223,7 +223,7 @@ const Home = (props) => {
 
         <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
           <img src={delphi} alt='delphi' style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-          <img src={vm} alt='delphi'style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+          <img src={vm} alt='vm'style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.5} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
@@ -242,22 +242,22 @@ const Home = (props) => {
         </ParallaxLayer>    
         <ParallaxLayer
           offset={0}
-          speed={0.5}
+          speed={0.9}
           //onClick={() => props.parallax.scrollTo(1)}
           style={{ display: 'flex', position:'sticky', margin: '0', top:'0px', left:'0px', backgroundImage:`${laptopItservis}`,
           alignItems: 'center', justifyContent: 'center'}}>
-          <img src={laptopItservis} alt='laptop' style={{ width: '100%',  }} /> 
+          <img src={macbook} alt='laptop' style={{ width: '60%',  }} /> 
           {/* {url('server')} */}
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
-          speed={0.1}
+          offset={0.4}
+          speed={0.3}
           //onClick={() => props.parallax.scrollTo(2)}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
      
 
-           {/* <img src={url('bash')} style={{ width: '40%' }} />  */}
+           <img src={url('bash')} style={{ width: '40%' }} /> 
         </ParallaxLayer>
 
         <ParallaxLayer
