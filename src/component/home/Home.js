@@ -246,7 +246,7 @@ const Home = (props) => {
           //onClick={() => props.parallax.scrollTo(1)}
           style={{ display: 'flex', position:'sticky', margin: '0', top:'0px', left:'0px', backgroundImage:`${laptopItservis}`,
           alignItems: 'center', justifyContent: 'center'}}>
-          <img src={macbook} alt='laptop' style={{ width: '60%',  }} /> 
+          <img src={macbook} alt='laptop' style={{ width: '75%',  }} /> 
           {/* {url('server')} */}
         </ParallaxLayer>
 
