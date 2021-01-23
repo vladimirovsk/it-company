@@ -22,7 +22,7 @@ function App(props) {
   const routes = (
     <Switch>
         <Route exact={true} path="/home" component={Home}/>
-        <Route exact={true} path="/" component={Home}/>
+        {/* <Route exact={true} path="/" component={Home}/> */}
         <Route path="/p404" exact={true} render={() =><P404 />}/>
        
     </Switch>
