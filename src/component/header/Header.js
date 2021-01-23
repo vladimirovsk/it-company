@@ -200,7 +200,7 @@ const Header = (props) => {
 
 
     return (
-      <Navbar collapseOnSelect fixed expand="lg" className='navbar'>
+      <Navbar collapseOnSelect sticky="top" expand="lg" className='navbar'>
         {/* <div className='container'> */}
          {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -213,7 +213,7 @@ const Header = (props) => {
               spy={true}
               href="#home"
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={800}
               className='nav-link'>HOME</Link></Nav>
             <Nav><Link 
@@ -223,7 +223,7 @@ const Header = (props) => {
               spy={true}
               href="#project"
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={800}
               className='nav-link'>PROJECT</Link></Nav>
             <Nav><Link  
@@ -233,7 +233,7 @@ const Header = (props) => {
               spy={true}
               href="#contact"
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={800}
               className='nav-link'>CONTACT</Link></Nav>
             <Nav><Link 
@@ -242,9 +242,9 @@ const Header = (props) => {
               spy={true}
               href="#about"
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={800}
-              className='nav-link'>ABOUNT</Link></Nav>
+              className='nav-link'>ABOUT</Link></Nav>
           </Nav>
       </Navbar.Collapse>
 

@@ -3,13 +3,14 @@ import React from 'react';
 import Header from "./component/header/Header";
 import P404 from "./component/p404/P404"
 import Home from "./component/home/Home";
+import Footer from './component/footer/Footer';
+import About from './component/about/About';
+import Project from './component/project/Project';
+import Contact from './component/contact/Contact';
 import {withTheme} from './component/Theme'
-import {
+import {  Switch,  Route, Redirect } from "react-router-dom";
 
-  Switch,
-  Route, Redirect
-  
-} from "react-router-dom";
+
 
 function App(props) {
   const {darkMode} = props
@@ -31,7 +32,11 @@ function App(props) {
     return (
       <div>
         <Header />
-        {routes}
+        {/* <Home /> */}
+        <Project />
+        <Contact />
+        <About />
+        <Footer />
       </div>
 
   );
