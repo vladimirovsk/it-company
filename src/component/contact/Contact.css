@@ -3,3 +3,13 @@
   background-color: rgb(255, 253, 253);
   color:rgb(2, 2, 2);
 }
+
+.TestObject {
+    position: relative;
+    
+    color: red;
+    border-color: green; 
+    border-width: 2px;
+    border-style: solid;
+    margin:10px;
+}

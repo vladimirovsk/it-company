@@ -12,9 +12,7 @@ import sql from '../img/sql.png';
 import sql2 from '../img/sql2.png';
 import angular from '../img/angular.png';
 import s1 from '../img/1c.png';
-import rest from '../img/REST.png';
 import network4 from '../img/network4.jpg';
-
 import imgDatabase from '../img/database.jpg';
 import imgServer from '../img/servers.jpg';
 //import imgRest from '../img/REST.png';
@@ -23,7 +21,7 @@ import {withTheme} from '../Theme'
 
 
 
-import { makeStyles, useTheme} from "@material-ui/core/styles";
+import { makeStyles} from "@material-ui/core/styles";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid'
 import {Card, CardContent, CardMedia, Typography} from '@material-ui/core';
@@ -33,12 +31,11 @@ import {Card, CardContent, CardMedia, Typography} from '@material-ui/core';
 //import { bounce } from 'react-animations';
 //import { Parallax } from 'react-scroll-parallax';
 //import { Parallax} from 'react-parallax';
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 
 import './Home.css';
 
-const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
-
+//const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 //const urlNetwork = url('https://www.lfnetworking.org/wp-content/uploads/sites/55/2017/12/cog_bg_networking.jpg')
 // const Pink = ({ children }) => <span style={{ color: '#FF6AC1' }}>{children}</span>
 // const Yellow = ({ children }) => <span style={{ color: '#EFF59B' }}>{children}</span>
@@ -46,14 +43,6 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 // const Green = ({ children }) => <span style={{ color: '#57EE89' }}>{children}</span>
 // const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
 // const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
-
-
-
-
-
-
-
-
 
 const Home = (props) => {
 
@@ -130,7 +119,7 @@ const Home = (props) => {
 }));
     //const theme = useTheme();
     const classes = useStyles();
-    const [darkMode, setDarkMode] = React.useState(props)
+    //const [darkMode, setDarkMode] = React.useState(props)
 
     const cards = [
       {id:"1",
@@ -178,10 +167,10 @@ const Home = (props) => {
             </Container>
     )
     
-    React.useEffect(()=>{
-      console.log('HOME', darkMode)
-      setDarkMode(darkMode)
-  }, [darkMode])
+  //   React.useEffect(()=>{
+  //     console.log('HOME', darkMode)
+  //     setDarkMode(darkMode)
+  // }, [darkMode])
 
     return (
       

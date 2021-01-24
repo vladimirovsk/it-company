@@ -1,12 +1,13 @@
 import React from 'react'
-import {Link, animateScroll as scroll } from "react-scroll";
-import { makeStyles, useTheme} from "@material-ui/core/styles";
-import { withStyles } from '@material-ui/core/styles';
+// import {Link, animateScroll as scroll } from "react-scroll";
+import {Link } from "react-scroll";
+//import { makeStyles, useTheme} from "@material-ui/core/styles";
+//import { withStyles } from '@material-ui/core/styles';
 // import iconLogo from '../../LogoCompany.png';
 //import {AppBar, Toolbar, Link, Tabs, Tab,  Switch } from '@material-ui/core'
-import { Switch } from '@material-ui/core';
+//import { Switch } from '@material-ui/core';
 //import {FormControlLabel, FormGroup, Typography } from '@material-ui/core'
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+//import useMediaQuery from "@material-ui/core/useMediaQuery";
 //import {ThemeContext} from '../../context/themeContext';
 import {withTheme} from '../Theme' 
 import { Navbar, Form, Nav } from 'react-bootstrap';
@@ -14,134 +15,122 @@ import { Navbar, Form, Nav } from 'react-bootstrap';
 import './Header.css';
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-     // color: theme.palette.text.primary,
-      //backgroundColor: theme.palette.background.default,
-    },
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//       flexGrow: 1,
+//      // color: theme.palette.text.primary,
+//       //backgroundColor: theme.palette.background.default,
+//     },
 
-    title: {
-      flexGrow: 1,
-      color: theme.palette.text.primary
-    },
+//     title: {
+//       flexGrow: 1,
+//       color: theme.palette.text.primary
+//     },
 
-    tabContainer:{
-      marginLeft: 'auto',
-      },
+//     tabContainer:{
+//       marginLeft: 'auto',
+//       },
     
-    leftGroup:{
-      marginLeft: 'auto',
-    },
+//     leftGroup:{
+//       marginLeft: 'auto',
+//     },
     
-    tab:{
-        //color:'#fafafa',
-    ...theme.tab,
-        //textShadow: '1px 1px #0000ff',
-        color: theme.palette.secondary.main,
-        minWidth:10,
-        marginLeft:'25px',
+//     tab:{
+//         //color:'#fafafa',
+//     ...theme.tab,
+//         //textShadow: '1px 1px #0000ff',
+//         color: theme.palette.secondary.main,
+//         minWidth:10,
+//         marginLeft:'25px',
 
-    },
-    appbar:{
-        zIndex: theme.zIndex.modal+1,
-        //backgroundColor: theme.palette.background.paper,
-        //color: theme.palette.text.primary
-        //color: theme.palette.color.default
-      },
+//     },
+//     appbar:{
+//         zIndex: theme.zIndex.modal+1,
+//         //backgroundColor: theme.palette.background.paper,
+//         //color: theme.palette.text.primary
+//         //color: theme.palette.color.default
+//       },
 
 
-    logoMini:{
-        height:"5em",
-        [theme.breakpoints.down("md")]:{
-          height:"4em"  },
-        [theme.breakpoints.down("sm")]:{
-          height:"3em"  }
-      },
+//     logoMini:{
+//         height:"5em",
+//         [theme.breakpoints.down("md")]:{
+//           height:"4em"  },
+//         [theme.breakpoints.down("sm")]:{
+//           height:"3em"  }
+//       },
 
-    logoContainer:{
-        outline: 'none',
-        padding:'10px',
-        "&:hover":{
-          backgroundColor:"transparent"
-        }
-      },
+//     logoContainer:{
+//         outline: 'none',
+//         padding:'10px',
+//         "&:hover":{
+//           backgroundColor:"transparent"
+//         }
+//       },
     
-  }));
+//   }));
 
-  const IOSSwitch  = withStyles((theme)=>({
-    root: {
-        width: 42,
-        height: 26,
-        padding: 0,
-        margin: theme.spacing(1),
-      },
-    switchBase: {
-        padding: 1,
-        '&$checked': {
-          transform: 'translateX(16px)',
-          color: theme.palette.common.white,
+  // const IOSSwitch  = withStyles((theme)=>({
+  //   root: {
+  //       width: 42,
+  //       height: 26,
+  //       padding: 0,
+  //       margin: theme.spacing(1),
+  //     },
+  //   switchBase: {
+  //       padding: 1,
+  //       '&$checked': {
+  //         transform: 'translateX(16px)',
+  //         color: theme.palette.common.white,
           
-          '& + $track': {
-            backgroundColor: theme.palette.secondary.main,// '#D2691E',
-            opacity: 1,
-            border: 'none',
-          },
+  //         '& + $track': {
+  //           backgroundColor: theme.palette.secondary.main,// '#D2691E',
+  //           opacity: 1,
+  //           border: 'none',
+  //         },
 
-        },
-         '&$focusVisible $thumb': {
-          color: '#9f8240',
-          border: '6px solid #fff',
-         },
-    },
+  //       },
+  //        '&$focusVisible $thumb': {
+  //         color: '#9f8240',
+  //         border: '6px solid #fff',
+  //        },
+  //   },
 
-    thumb: {
-      width: 24,
-      height: 24,
-    },
+  //   thumb: {
+  //     width: 24,
+  //     height: 24,
+  //   },
 
-    track: {
-      borderRadius: 26 / 2,
-      border: `1px solid ${theme.palette.grey[800]}`,
-      //border: `1px solid ${theme.palette.secondary.main}`,
+  //   track: {
+  //     borderRadius: 26 / 2,
+  //     border: `1px solid ${theme.palette.grey[800]}`,
+  //     //border: `1px solid ${theme.palette.secondary.main}`,
 
-      backgroundColor: '#eeeeee',// theme.palette.primary.main,
-      opacity: 1,
-      transition: theme.transitions.create(['background-color', 'border']),
-    },
-    checked: {},
-      //focusVisible: {}
-  })) (Switch);
+  //     backgroundColor: '#eeeeee',// theme.palette.primary.main,
+  //     opacity: 1,
+  //     transition: theme.transitions.create(['background-color', 'border']),
+  //   },
+  //   checked: {},
+  //     //focusVisible: {}
+  // })) (Switch);
 
 
 const Header = (props) => {
-    const [value, setValue] = React.useState(0);
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down("sm"));
-    const classes = useStyles();
-    const {darkMode, setDarkMode} = props;
+    // const [value, setValue] = React.useState(0);
+    // const [selectedIndex, setSelectedIndex] = React.useState(1);
+    //const theme = useTheme();
+    // const matches = useMediaQuery(theme.breakpoints.down("sm"));
+    // const classes = useStyles();
+    //const {darkMode, setDarkMode} = props;
 
-    const scrollToTop = () => {
-      scroll.scrollToTop();
-    };
+    // const scrollToTop = () => {
+    //   scroll.scrollToTop();
+    // };
 
     const autoClose = async(event) => {
-      let element = await document.getElementById("responcive-navbar-nav");
+      //let element = await document.getElementById("responcive-navbar-nav");
      // await element.classList.toggle("show");
   }
-
-
-    React.useEffect(()=>{
-      console.log(window.location.pathname,value)
-
-      // if (((window.location.pathname === "/home")||(window.location.pathname === "/")) && value !== 0){
-      //   setValue(0)
-      // }else if  (window.location.pathname === "/p404" && value !==  1) {
-      //   setValue(1)
-      // }
-
-    }, [value])
 
     // const tabs = (
     //     <Tabs 
@@ -193,9 +182,9 @@ const Header = (props) => {
     //    </Tabs>        
     // )
     
-     const handleClickNight = (event) =>{
-      //console.log('PALITTE', theme.palette);
-      setDarkMode(!darkMode)}
+    //  const handleClickNight = (event) =>{
+    //   //console.log('PALITTE', theme.palette);
+    //   setDarkMode(!darkMode)}
 
 
 
@@ -251,10 +240,10 @@ const Header = (props) => {
       {/* </div>  */}
       <Nav>
         <Form inline>
-          <IOSSwitch   
+          {/* <IOSSwitch   
             checked={darkMode} 
             onChange={handleClickNight} 
-            name="Night" />           
+            name="Night" />            */}
       </Form>
       </Nav>
       </Navbar>
