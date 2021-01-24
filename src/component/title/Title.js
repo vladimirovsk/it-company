@@ -3,6 +3,7 @@ import {Container} from 'react-bootstrap';
 import './Title.css'
 import laptop from '../img/laptopDesign.jpg'
 //import title from '../img/title.jpg'
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 
 
 function Title(){
@@ -32,7 +33,7 @@ function Title(){
           if (animItemHeight>window.innerHeight){
             animItemPoint = window.innerHeight - window.innerHeight / animStart
           }
-          if (( window.pageYOffset >= animItemOffset - animItemPoint ) && window.pageYOffset <= (animItemOffset+animItemPoint)){
+          if (( window.pageYOffset > animItemOffset - animItemPoint ) && window.pageYOffset < (animItemOffset+animItemPoint)){
           animItem.classList.add('_active')
           }else{
           animItem.classList.remove('_active') 
@@ -46,26 +47,31 @@ function Title(){
     
    
   },[])
-  return(      <Container id='home' fluid={true} className={'Title'} 
-
-      style={{
-        height:'80vh',  
+  return(      
+    <Container id='home' fluid={true} className={'Title'} 
+      style1={{
+        height:'100vh',  
         backgroundImage: `url(${laptop})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
         }}>
+    <Parallax pages={1}>
+      <ParallaxLayer offset={1} speed={1}>
+        <img src={laptop} alt="" style={{ width: '10%', marginLeft: '5%' }}/>
+      </ParallaxLayer>
         <div className='fullscreen_context'>  
-          <div className='fullscreen_title _anim-items'>
+          <div className='fullscreen_title_parallax _anim-items1'>
             IT COMPANY
           </div>
-          <div className='fullscreen_text _anim-items'>
+          <div className='fullscreen_text_parallax _anim-items1'>
             Our work is our life
           </div>
-          <div className='fullscreen_text2 _anim-items'>
+          <div className='fullscreen_text2_parallax _anim-items1'>
             We turn your ideas into reality
           </div>
         </div>
+        </Parallax>
       </Container>
   )
 }
