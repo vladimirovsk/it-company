@@ -1,4 +1,13 @@
 .About {
-  height: 40em;
+  
   background-color: darkgrey;
 }
+
+.Grid{
+  position: relative;
+  height: 30em;
+  color:white;
+  border-color: whitesmoke; 
+  border-width: 0px;
+  border-style: solid;
+  }
