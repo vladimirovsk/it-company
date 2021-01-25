@@ -3,9 +3,8 @@
 }
 
 
-
 .fullscreen_context {
-  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Crete Round', sans-serif;
   z-index: 2;
   position: relative;
   max-width: 1400px;
@@ -17,9 +16,17 @@
   justify-content: flex-end;
   text-shadow: 3px 3px #323232; ;
 }
+
+.fullscreen_title_parallax {
+  font-family: 'Coda Caption', sans-serif;
+  font-size: 3em;
+  /* margin: 0px, 0px, 20vh, 0px; */
+  margin-top: 2em;
+}
+
 .fullscreen_title {
   font-family: 'Coda Caption', sans-serif;
-  font-size: 100px;
+  font-size: 70px;
   /* margin: 0px, 0px, 20vh, 0px; */
   margin-top: 2em;
   transform: translate(0px, 120%);
@@ -30,6 +37,12 @@
 .fullscreen_title._active {
   transform: translate(0px, 0px);
   opacity: 1;
+}
+
+.fullscreen_text_parallax {
+  font-size: 2em;
+  
+  margin-top: 0em;
 }
 
 .fullscreen_text {

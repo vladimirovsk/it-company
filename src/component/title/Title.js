@@ -1,7 +1,8 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
 import './Title.css'
-import laptop from '../img/laptopDesign.jpg'
+import laptop from '../img/laptopDesign.jpg';
+import logo from '../../LogoCompany.png';
 //import title from '../img/title.jpg'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 
@@ -49,27 +50,34 @@ function Title(){
   },[])
   return(      
     <Container id='home' fluid={true} className={'Title'} 
-      style1={{
-        height:'100vh',  
+      style={{
+        height:'80vh',  
         backgroundImage: `url(${laptop})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
         }}>
-    <Parallax pages={1}>
-      <ParallaxLayer offset={1} speed={1}>
-        <img src={laptop} alt="" style={{ width: '10%', marginLeft: '5%' }}/>
-      </ParallaxLayer>
-        <div className='fullscreen_context'>  
-          <div className='fullscreen_title_parallax _anim-items1'>
+    <Parallax pages={1.2}>
+    <div className='fullscreen_context'>  
+      <ParallaxLayer offset={0.9} speed={0.2}>
+          {/* <div className='fullscreen_title_parallax _anim-items1'>
             IT COMPANY
-          </div>
+          </div>  */}
+          <img src={logo} alt='' className='App-logo1' 
+            style={{ 
+              width: '25%', textShadow: '2px 2px white'}} />
+      </ParallaxLayer>
+      <ParallaxLayer offset={1} speed={0.3}>
           <div className='fullscreen_text_parallax _anim-items1'>
             Our work is our life
           </div>
-          <div className='fullscreen_text2_parallax _anim-items1'>
+      </ParallaxLayer>    
+      <ParallaxLayer offset={1} speed={0.4}>
+          <div className='fullscreen_text_parallax _anim-items1'>
             We turn your ideas into reality
           </div>
+      </ParallaxLayer>  
+
         </div>
         </Parallax>
       </Container>
