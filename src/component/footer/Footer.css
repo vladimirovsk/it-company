@@ -1,5 +1,28 @@
 .Footer{
   background-color: black;
-  height: 20em;
+  /* height: 15em; */
   color: white;
+}
+
+.Grid_footer_title {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.Grid_footer {
+  position: relative;
+  height: 12em;
+
+  color:white;
+  border-color: whitesmoke; 
+  border-width: 0px;
+  border-style: solid;
+  margin: 0px;
+}
+
+
+ul {
+  list-style-type: none;
+  line-height: 2;
+  margin: 20px;
 }
