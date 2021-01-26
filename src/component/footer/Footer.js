@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css'
+import fb from '../img/fb.png';
+
 
 
 
@@ -29,7 +31,17 @@ function Footer(){
           </Col>
           <Col lg={3}  sm={12}  className='Grid_footer'>
           <div className='Grid_footer_title text-center'>Social</div>
-
+          <ul>
+          <li><a href="https://www.facebook.com/itvladimirov" 
+              style={{
+                color: 'white'
+              }} target= "_blank" rel= "noopener noreferrer">
+            <img src={fb} alt='fb' height='40' style={{marginRight: '10px'}}/ >
+              IT-COMPANY
+            </a>
+          </li>
+            
+          </ul>
           </Col>
           <Col lg={3} sm={12}  className='Grid_footer'>
           <div className='Grid_footer_title text-center'>Partners</div>
