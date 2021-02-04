@@ -1,15 +1,129 @@
 .Contact {
-  height: 30em;
-  background-color: rgb(255, 253, 253);
+  /* height: 30em; */
+  background-color: #555454;
   color:rgb(2, 2, 2);
+}
+
+.CardContact{
+  margin: 20px;
+  background-color: transparent;
+  border-width: 0px;
+  border-color: black;
+  border-radius: 0px;
+  transform: translate(0, 50%);
+  opacity: 0;
+  
+  transition: all 0.3s ease-in-out 0.3s;
+}
+
+.CardContact_title{
+  color: white;
+  text-shadow: 0 0 3px #343434;
+}
+
+.CardContact_text{
+  color: white;
+  text-shadow: 0 0 3px #343434;
+}
+
+.CardContact._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 0.6s ease-in-out 0.3s;
+}
+
+.Photo{
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  max-height: 250px;
+  max-width: 250px;
+  width: 80%; /* Ширина изображений */
+  /* height: 100%; /*Высота изображении */
+  object-fit: cover; /* Вписываем фотографию в область */
+  border-radius: 200px;
+  box-shadow: 0 0 20px #343434;
 }
 
 .TestObject {
     position: relative;
-    
     color: red;
     border-color: green; 
     border-width: 2px;
     border-style: solid;
     margin:10px;
 }
+
+
+.fullscreen_contact {
+  font-family: 'Crete Round', sans-serif;
+  z-index: 2;
+  position: relative;
+  max-width: 1400px;
+  margin: 0px auto;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+  text-shadow: 3px 3px #323232; ;
+}
+
+
+.fullscreen_title_contact {
+  position: absolute;
+  font-family: 'Coda Caption', sans-serif;
+  font-size: 60px;
+   /* margin: 0px, 0px, 20vh, 0px; */
+  /* margin-top: 2em; */
+
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0.5s; 
+  /* transform: translate(0, -100px);
+  opacity: 1;
+  transition: all 0.3s ease 0s; */
+}
+
+.contact_out_left{
+
+  position: relative;
+  color: black;
+  border-color: green; 
+  border-width: 1px;
+  border-style: solid;
+  margin: 0px;
+  padding: 1em;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out 1s;
+}
+.contact_out_left._active{
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out 1.2s;
+}
+
+.contact_out_right{
+  position: relative;
+  color: black;
+  border-color: green; 
+  border-width: 1px;
+  border-style: solid;
+  margin: 0px;
+  padding: 1em;
+  /* transform: translate(120%, 0); */
+  /* transition: all 0.3s ease-in-out 1s; */
+}
+
+.contact_out_right._active{
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out 1.5s;
+}
+
+
+.fullscreen_title_contact._active {
+  transform: translate(50%, 0);
+  opacity: 1;
+}
+

@@ -1,21 +1,40 @@
-import React from 'react'
+import React, {useState} from 'react'
 // import {Link, animateScroll as scroll } from "react-scroll";
 import {Link } from "react-scroll";
-//import { makeStyles, useTheme} from "@material-ui/core/styles";
-//import { withStyles } from '@material-ui/core/styles';
-// import iconLogo from '../../LogoCompany.png';
-//import {AppBar, Toolbar, Link, Tabs, Tab,  Switch } from '@material-ui/core'
-//import { Switch } from '@material-ui/core';
-//import {FormControlLabel, FormGroup, Typography } from '@material-ui/core'
-//import useMediaQuery from "@material-ui/core/useMediaQuery";
-//import {ThemeContext} from '../../context/themeContext';
+import {translate ,getLanguage, setLanguage } from 'react-switch-lang';
+import { makeStyles} from "@material-ui/core/styles";
+import {Button,  Menu, MenuItem, } from '@material-ui/core'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import {withTheme} from '../Theme' 
-import { Navbar, Form, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Form } from 'react-bootstrap';
 
 import './Header.css';
 
 
-// const useStyles = makeStyles((theme) => ({
+ const useStyles = makeStyles((theme) => ({
+  buttonLng:{
+    ...theme.typography.button,
+    outline: 'none',
+    width:'5em',
+    height:"28px",
+  },
+
+  menu: {
+   //backgroundColor: theme.palette.common.primary,
+   color  : theme.typography.caption,//"black",
+   borderRadius:'0px',
+   //"&:hover":{
+   //color:"black",
+   // },
+  },
+
+  menuItem:{
+   ...theme.typography.tab,
+   opacity:0.7,
+   borderRadius:'0px',
+  },
+
+ }));
 //     root: {
 //       flexGrow: 1,
 //      // color: theme.palette.text.primary,
@@ -114,79 +133,82 @@ import './Header.css';
   //     //focusVisible: {}
   // })) (Switch);
 
-
 const Header = (props) => {
+    const classes = useStyles();
+    const [{t}] = useState(props);
+    // const theme = useTheme();
+    const [anchorEl2, setAnchorEl2] =  useState(null)
+    const [openMenu, setOpenMenu] = useState(false)
+
+
     // const [value, setValue] = React.useState(0);
     // const [selectedIndex, setSelectedIndex] = React.useState(1);
-    //const theme = useTheme();
+
     // const matches = useMediaQuery(theme.breakpoints.down("sm"));
-    // const classes = useStyles();
+    // 
     //const {darkMode, setDarkMode} = props;
 
     // const scrollToTop = () => {
     //   scroll.scrollToTop();
     // };
 
-    const autoClose = async(event) => {
-      //let element = await document.getElementById("responcive-navbar-nav");
-     // await element.classList.toggle("show");
+    const handleClickLng = (event) => {
+      setOpenMenu(true)
+      setAnchorEl2(event.currentTarget);
+    }
+
+    const handleCloseLng = (event) => {
+		  setOpenMenu(false)
+	  	setAnchorEl2(null)
   }
 
-    // const tabs = (
-    //     <Tabs 
-    //       aria-label="tabsPages"
-    //       className={classes.tabContainer} 
-    //       value={value} 
-    //       onChange={null}
-    //       indicatorColor="secondary"
-    //       scrollButtons="auto"
-    //       color='primary'
-    //       height='20px'
-    //       //color='#fafafa'
-    //     >
-    //     <Tab
-    //         className={classes.tab} 
-    //         selected ={value === 0}
-    //         component={Link}  
-    //         Link = '/home'
-    //         to='/home'
-    //         label="HOME"
-    //         onClick={()=>setValue(0)} 
-    //     />
-    //     <Tab 
-    //     selected ={value === 1}
-    //     className={classes.tab} 
-    //     component={Link} 
-    //     to='/p404' 
-    //     label='ABOUT'
-    //     onClick={()=>setValue(1)}
-    //     />
-    //     <Tab 
-    //       selected ={value === 2}
-    //       className={classes.tab} 
-    //       component={Link} 
-    //       to='/about' 
-    //       label ='SERVICES'
-    //       onClick={()=>setValue(2)}
-    //     />
-    
-    //     <Tab 
-    //       selected ={value === 3}
-    //       hidden = {false}
-    //       className={classes.tab} 
-    //       component={Link} 
-    //       //to={isAuth ?'/logout' :'/auth'} 
-    //       label ='OUR PROJECT'
-    //       onClick={()=>setValue(3)}
-    //     />
-    //    </Tabs>        
-    // )
-    
-    //  const handleClickNight = (event) =>{
+  const handleChangeLg = (event, lng) => {
+		setLanguage(lng);
+		setAnchorEl2(null)
+		setOpenMenu(false)
+  };
+
+  const autoClose = async(event) => {
+      //let element = await document.getElementById("responcive-navbar-nav");
+     // await element.classList.toggle("show");
+    }
+        //  const handleClickNight = (event) =>{
     //   //console.log('PALITTE', theme.palette);
     //   setDarkMode(!darkMode)}
 
-
+    const lngButton = (
+      <React.Fragment>
+        <Button 
+          // outline = 'none'
+          // display = 'inline-block'
+          hidden = {false}
+          variant="contained"
+          color="secondary"
+          className={classes.buttonLng}
+          onClick={handleClickLng}
+          endIcon={<ArrowDropDownIcon/>}
+        >
+          {getLanguage()}
+        </Button>
+  
+        <Menu
+          id="simple-menu-lng"
+          anchorEl={anchorEl2}
+          keepMounted
+          open={openMenu}//{Boolean(anchorEl2)}
+          onClose={handleCloseLng}
+          classes={{paper: classes.menu}}
+          style={{zIndex: 5402 }}
+          MenuListProps={{
+            onMouseLeave: handleCloseLng
+          }}
+      >
+              <MenuItem onClick={(event) => {handleChangeLg(event, 'en'); setOpenMenu(false)}} className={classes.menuItem}  >EN</MenuItem>
+              <MenuItem onClick={(event) => {handleChangeLg(event, 'ru'); setOpenMenu(false)}} className={classes.menuItem}  >RU</MenuItem>
+              <MenuItem onClick={(event) => {handleChangeLg(event, 'pl'); setOpenMenu(false)}} className={classes.menuItem}  >PL</MenuItem>
+        </Menu>	
+      </React.Fragment>
+    )
 
     return (
       <Navbar collapseOnSelect sticky="top" expand="lg" className='navbar'>
@@ -204,7 +226,7 @@ const Header = (props) => {
               smooth={true}
               offset={-30}
               duration={800}
-              className='nav-link'>HOME</Link></Nav>
+              className='nav-link'>{t('navbar.glavn')}</Link></Nav>
             <Nav><Link 
               onClick={autoClose}
               activeClass="msactive"
@@ -214,7 +236,7 @@ const Header = (props) => {
               smooth={true}
               offset={-30}
               duration={800}
-              className='nav-link'>PROJECT</Link></Nav>
+              className='nav-link'>{t('navbar.project')}</Link></Nav>
             <Nav><Link  
               onClick={autoClose}
               activeClass="msactive"
@@ -224,7 +246,7 @@ const Header = (props) => {
               smooth={true}
               offset={-30}
               duration={800}
-              className='nav-link'>CONTACT</Link></Nav>
+              className='nav-link'>{t('navbar.kontact')}</Link></Nav>
             <Nav><Link 
               onClick={autoClose}
               to="about"
@@ -233,19 +255,21 @@ const Header = (props) => {
               smooth={true}
               offset={-30}
               duration={800}
-              className='nav-link'>ABOUT</Link></Nav>
+              className='nav-link'>{t('navbar.about')}</Link></Nav>
           </Nav>
-      </Navbar.Collapse>
-
-      {/* </div>  */}
+          </Navbar.Collapse>
+        {/* </div>  */}
       <Nav>
         <Form inline>
-          {/* <IOSSwitch   
+        {lngButton}
+           {/* <IOSSwitch   
             checked={darkMode} 
             onChange={handleClickNight} 
-            name="Night" />            */}
-      </Form>
+            name="Night" />             */}
+          </Form>
+          
       </Nav>
+      
       </Navbar>
         // <AppBar position="fixed" className={classes.appbar} color="primary">
         //     <Toolbar disableGutters={true}>
@@ -278,4 +302,4 @@ const Header = (props) => {
     )
 }
 
-export default withTheme(Header);
+export default withTheme(translate(Header));

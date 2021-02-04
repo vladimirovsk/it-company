@@ -9,49 +9,30 @@ import About from './component/about/About';
 import Project from './component/project/Project';
 import Contact from './component/contact/Contact';
 import {withTheme} from './component/Theme'
-//import {  Switch,  Route } from "react-router-dom";
 
-//img
-// import react from './component/img/react.png';
-// import nodejs from './component/img/nodejs.png';
+import {setDefaultLanguage, setLanguageCookie, setTranslations, translate} from "react-switch-lang";
+import ru from './i18/ru.json';
+import en from './i18/en.json';
+import pl from './i18/pl.json';
 
+setTranslations({ ru, en, pl });
+setDefaultLanguage('pl');
+setLanguageCookie();
 
-//import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 
 function App(props) {
-  //const {darkMode} = props
-
-  // React.useEffect(()=>{
-  //   console.log('APP', darkMode)
-  // },[darkMode])
-
-
-  // const routes = (
-  //   <Switch>
-  //       <Route exact={true} path="/home" component={Title}/>
-  //       {/* <Route exact={true} path="/" component={Home}/> */}
-  //       <Route path="/p404" exact={true} render={() =><P404 />}/>
-       
-  //   </Switch>
-  //   )
   
     return (
       <div>
-
         <Header />
-
         <Title />
         <Project /> 
-
-        
         <Contact />
         <About />
         <Footer />
-       
-
       </div>
 
   );
 }
 
-export default withTheme(App);
+export default withTheme(translate(App));

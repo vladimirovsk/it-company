@@ -11,7 +11,7 @@ function Footer(){
       <Container id='footer' fluid={true} className='Footer'>
         <Row> 
           <Col lg={3}  sm={12} className='Grid_footer text-left'>
-          <div className='Grid_footer_title text-center'>Programming</div>
+          <div className='Grid_footer_title text-center'>PROGRAMMING</div>
           <ul>
               <li>Database Design </li>
               <li>WEB page development</li>
@@ -21,31 +21,36 @@ function Footer(){
           </Col>
           
           <Col lg={3}  sm={12}  className='Grid_footer float-left'>
-          <div className='Grid_footer_title text-center'>Contact</div>
+          <div className='Grid_footer_title text-center'>CONTACT</div>
           <ul>
               <li>31-153 Kraków, </li>
               <li>ul. Szlak 77/222</li>
-              <li>email: lisa@it-company.com</li>
-              <li>tel +48 881 515 691</li>
+              <li>email: <a href="mailto:lisa@webnit.pl?subject=From Web page WebNit&amp;body=Hello, " style={{color: 'white'}} >lisa@webnit.pl</a></li>
+              <li>tel: <a href="tel:+48881515691" style={{color: 'white'}} >+48 881 515 691</a></li>
             </ul>
           </Col>
           <Col lg={3}  sm={12}  className='Grid_footer'>
-          <div className='Grid_footer_title text-center'>Social</div>
+          <div className='Grid_footer_title text-center'>SOCIAL</div>
           <ul>
           <li><a href="https://www.facebook.com/itvladimirov" 
-              style={{
-                color: 'white'
-              }} target= "_blank" rel= "noopener noreferrer">
+              style={{color: 'white'}} target= "_blank" rel= "noopener noreferrer">
             <img src={fb} alt='fb' height='40' style={{marginRight: '10px'}}/ >
-              IT-COMPANY
+            webnit.pl
             </a>
           </li>
             
           </ul>
           </Col>
           <Col lg={3} sm={12}  className='Grid_footer'>
-          <div className='Grid_footer_title text-center'>Partners</div>
+          <div className='Grid_footer_title text-center'>PARTHERS</div>
 
+          </Col>
+        </Row>  
+        <Row>
+          <Col className='Grid_footer_copyright'>
+            <p>Copyright &copy; 2021 by <a href='/' >Web NIT </a></p>
+                    {/* <p>Nasza strona wykorzystuje pliki cookie. 
+                      <a href="polityka_prywatnosci.html">Polityka prywatności</a></p> */}
           </Col>
         </Row>  
       </Container>
