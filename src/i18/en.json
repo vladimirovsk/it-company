@@ -120,7 +120,14 @@
     },
     "row2": {
       "title": "Bank payment system",
-      "text": "Software for realizing the possibility of premium payments in bank branches, payment terminals. Allows you to work on very weak communication channels, and provides the ability to make payments online directly from the payer to the service provider."
+      "text": "Software for realizing the possibility of premium payments in bank branches, payment terminals. Allows you to work on very weak communication channels, and provides the ability to make payments online directly from the payer to the service provider.",
+      "colapseText": {
+        "row1": "The automated system 'Universal Payment System' is designed for making payments from individuals and private entrepreneurs for various services, budget payments of various levels, duties, fines, utility bills, communication services, and others.",
+        "row2": "The main advantage of the system is its versatility in working with various types of payments, full automation of the cashier's work process, which will allow avoiding mistakes at the time of payment formation.",
+        "row3": "The system works in real time, which provides constantly up-to-date data and reference books for making payments when the system starts, the program is automatically updated. After that, the login window opens.",
+        "row4": "Ability to print registers and duplicate receipts for any shift in which payments were made.",
+        "row5": "Internal audit of the system's work in the field in the context of each open shift."
+      }
     },
     "row3": {
       "title": "Modem data transmission",

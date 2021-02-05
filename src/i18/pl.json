@@ -120,7 +120,12 @@
     },
     "row2": {
       "title": "System płatności bankowych",
-      "text": "Oprogramowanie do realizacji możliwości opłacania składek w oddziałach bankowych, terminale płatnicze. Umożliwia pracę na bardzo słabych kanałach komunikacyjnych oraz zapewnia możliwość dokonywania płatności online bezpośrednio od płatnika do usługodawcy."
+      "text": "Oprogramowanie do realizacji możliwości opłacania składek w oddziałach bankowych, terminale płatnicze. Umożliwia pracę na bardzo słabych kanałach komunikacyjnych oraz zapewnia możliwość dokonywania płatności online bezpośrednio od płatnika do usługodawcy.",
+      "colapseText": {
+        "row1": "Zautomatyzowany system „Universal Payment System” przeznaczony jest do dokonywania płatności od osób fizycznych i prywatnych przedsiębiorców za różne usługi, płatności budżetowe różnych poziomów, cła, kary, rachunki za media, usługi komunikacyjne i inne.",
+        "row2": "The body of the device is made of plastic and is specially configured for installation in basements. The housing has a sealed outlet for the antenna and terminals for connecting the power supply.",
+        "row3": "The device is equipped with a battery that allows it to continue autonomous operation for 360 hours after disconnecting the external power supply. The UP is equipped with a microprocessor that is programmed individually for the customer, indicating the serial number of the heat meter."
+      }
     },
     "row3": {
       "title": "Modem do przesyłania informacji",
@@ -129,7 +134,9 @@
       "colapseText": {
         "row1": "Urządzenie do transmisji danych (UP) jest przeznaczone do pobierania informacji z mierników ciepła i przesyłania ich do centralnej bazy danych w celu dalszego przetwarzania i wizualizacji danych.",
         "row2": "Korpus urządzenia wykonany jest z tworzywa sztucznego i jest specjalnie skonfigurowany do montażu w piwnicach. Obudowa posiada uszczelniony wyprowadzenie anteny oraz zaciski do zasilania.",
-        "row3": "Urządzenie wyposażone jest w akumulator, który pozwala na autonomiczną pracę przez 360 godzin po odłączeniu zewnętrznego zasilania. UP wyposażony jest w programowany indywidualnie dla klienta mikroprocesor wskazujący numer seryjny ciepłomierza."
+        "row3": "System działa w czasie rzeczywistym, co zapewnia na bieżąco aktualne dane i podręczniki do dokonywania płatności w momencie startu systemu, program aktualizuje się automatycznie. Następnie otworzy się okno logowania.",
+        "row4": "Możliwość drukowania rejestrów i duplikatów paragonów dla każdej zmiany, w której dokonano płatności.",
+        "row5": "Audyt wewnętrzny pracy systemu w terenie w kontekście każdej otwartej zmiany."
       }
 
     },

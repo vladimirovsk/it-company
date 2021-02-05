@@ -20,7 +20,12 @@ import imgUP1 from '../../assets/img/atmega.jpg'
 import impReact from '../../assets/img/react.png'
 import webdesign from '../../assets/img/webdesign2.png';
 import okt1 from '../../assets/img/OKT1.png';
-import okt2 from '../../assets/img/OKT2.png'
+import okt2 from '../../assets/img/OKT2.png';
+
+import nit1 from '../../assets/img/NIT1.png';
+import nit2 from '../../assets/img/NIT2.png';
+import nit3 from '../../assets/img/NIT3.png';
+
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles} from "@material-ui/core/styles";
 import './Project.css'
@@ -101,8 +106,17 @@ function Project(props){
 
 function raiseInvoiceClicked() {
   const url = 'https://drive.google.com/file/d/0B7gHNdjZ_HOscGJ3M1ZyXzRQbVU/view?usp=sharing';
+  //https://docs.google.com/document/d/1p78v4zjbJ-2rgdtp6taDgCFi65i3VRqmOvInCF-rvCk/edit?usp=sharing
   window.open(url, '_blank');
 }
+
+
+function openPymentSystem() {
+    const url = 'https://docs.google.com/document/d/1p78v4zjbJ-2rgdtp6taDgCFi65i3VRqmOvInCF-rvCk/edit?usp=sharing';
+    //
+    window.open(url, '_blank');
+  }
+
 
   return(
       <Container id='project' fluid={'md'} className={'Project mt5'}>   
@@ -110,7 +124,7 @@ function raiseInvoiceClicked() {
                     {/** animatePreScroll={true} initiallyVisible={false}  */}
 {/*----Zero Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true}>
+                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
                         <Card className={classes.projectCard}> 
                             <CardHeader 
                                 avatar={
@@ -164,7 +178,7 @@ function raiseInvoiceClicked() {
                     </Grid>
 {/*----One Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__backInRight'  animateOnce={true}>
+                    <ScrollAnimation animateIn='animate__slideInRight'  animateOnce={true}>
                         <Card className={classes.projectCard}>
                             <CardHeader
                                 avatar={
@@ -212,7 +226,7 @@ function raiseInvoiceClicked() {
                     </Grid>
 {/*----Two Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true}>
+                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -239,8 +253,11 @@ function raiseInvoiceClicked() {
                             </Grid>
                         </CardContent>
                         <CardActions disableSpacing>
+                        <Button variant="outlined" size="small" color="secondary" onClick={openPymentSystem}>
+                                {t('project.row4.documents')}
+                                </Button>
                                 <IconButton
-                                    disabled={true}
+                                    disabled={false}
                                     id='2'
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded2,
@@ -253,13 +270,48 @@ function raiseInvoiceClicked() {
                                 <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
+                            <Collapse in={expanded2} timeout="auto" unmountOnExit>
+                                <CardContent>
+                                <Typography variant='h5' align='center'>{t('project.row4.colapseTitle')}</Typography>
+                                    <Grid container style={{padding:20}}>
+                                    <Grid item>
+                                            <Grid container >
+                                                <Grid item md={4}>                                
+                                                <img style={{marginBottom:15, padding:10}} width={'80%'} src={nit1} alt='NIT1'/>
+                                                <img style={{marginBottom:15, padding:10}} width={'80%'} src={nit2} alt='NIT2'/>
+                                                <img style={{marginBottom:15, padding:10}} width={'80%'} src={nit3} alt='NIT3'/>
+                                                </Grid>  
+                                                <Grid item md={8}>
+                                                    <ul>
+                                                    <Typography paragraph align='justify'>
+                                                        <li>{t('project.row2.colapseText.row1')}</li>
+                                                    </Typography>
+                                                    <Typography paragraph align='justify'>
+                                                        <li>{t('project.row2.colapseText.row2')}</li>
+                                                    </Typography> 
+                                                    <Typography paragraph align='justify'>
+                                                        <li>{t('project.row2.colapseText.row3')}</li>
+                                                    </Typography>
+                                                    <Typography paragraph align='justify'>
+                                                        <li>{t('project.row2.colapseText.row4')}</li>
+                                                    </Typography>
+                                                    <Typography paragraph align='justify'>
+                                                        <li>{t('project.row2.colapseText.row5')}</li>
+                                                    </Typography>
+                                                    </ul>
+                                                </Grid>
+                                            </Grid>
+                                    </Grid>
+                                    </Grid>
+                                    </CardContent>
+                            </Collapse>
                         </Card>
                       </ScrollAnimation>
                     </Grid>
 {/*----Three Cards --------------------------------*/}
                     {/* <ScrollAnimation animateIn='animate__slideInUp' > */}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__backInRight' animateOnce={true}>
+                    <ScrollAnimation animateIn='animate__slideInRight' animateOnce={true}>
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -331,7 +383,7 @@ function raiseInvoiceClicked() {
 {/*----Fourth Cards --------------------------------*/}
                     {/* <ScrollAnimation animateIn='animate__slideInUp'> */}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true} >
+                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true} >
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -374,7 +426,6 @@ function raiseInvoiceClicked() {
                                 <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
-
                             <Collapse in={expanded4} timeout="auto" unmountOnExit>
                                 <CardContent>
                                 <Typography variant='h5' align='center'>{t('project.row4.colapseTitle')}</Typography>

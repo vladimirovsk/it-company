@@ -4,8 +4,8 @@ import {translate} from "react-switch-lang";
 import {Typography} from '@material-ui/core';
 import './About.css'
 
-import vsc from '../img/vsc1.jpg'
-import db from '../img/DatabaseDesign2.jpg'
+import vsc from '../../assets/img/vsc1.jpg'
+import db from '../../assets/img/DatabaseDesign2.jpg'
 
 
 function About(props){

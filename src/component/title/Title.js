@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Container} from 'react-bootstrap';
 import './Title.css'
-import laptop from '../img/laptopDesign.jpg';
+import laptop from '../../assets/img/laptopDesign.jpg';
 import logo from '../../LogoCompany.png';
 //import title from '../img/title.jpg'
 //import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';

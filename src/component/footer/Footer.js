@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css'
-import fb from '../img/fb.png';
+import fb from '../../assets/img/fb.png';
 
 
 
