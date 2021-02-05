@@ -189,5 +189,29 @@
     "telegram":"+38(097)599-65-60",
     "skype": "vladimirov_sk",
     "email":"sergey@itservis.od.ua"
+  },
+  "about": {
+    "text1": {
+      "row1" :"Rozwój nowoczesnych aplikacji implikuje tworzenie bazy danych, która rozwiązuje problemy wyszukiwania, strukturyzacji i porządkowania informacji, automatyzując wiele procesów. Bez baz danych we współczesnym świecie nie sposób wyobrazić sobie działania jakiejkolwiek aplikacji.",
+      "row2" : "Rozwój aplikacji do pracy z bazą danych, daje właścicielowi firmy dostęp do aktualnych informacji o funkcjonowaniu całej organizacji",
+      "row3" : {
+        "title": "Projektowanie i tworzenie bazy danych odbywa się w kilku etapach:",
+        "item1":"Zadanie techniczne zostało wyjaśnione;",
+        "item2":"Tworzona jest działająca przykładowa baza danych;",
+        "item3":"Wypełnianie bazy danych informacjami referencyjnymi;"
+      }
+      
+    },
+    "text2": {
+      "row1": "Nowoczesna technologia tworzenia oprogramowania dostosowana jest do indywidualnego klienta. Wiele zależy od organizacji procesu wytwarzania oprogramowania, składu i kwalifikacji specjalistów z zespołu programistów, a także od poprawnej dokumentacji wszystkich procesów wytwarzania oprogramowania.",
+      "row2": "Nasi eksperci udzielą Ci konsultacji, które pomogą Ci określić wymagania dotyczące oprogramowania, które musisz opracować. Wspólnie opracujemy niezbędne specyfikacje techniczne, a nasi specjaliści wdrożą je, etapowo wdrażając i testując w warunkach pracy.",
+      "row3" : {
+        "title":"Zapewnimy przyzwoity poziom rozwoju oprogramowania, a także wysokiej jakości wynik. Na koniec pracy klient otrzymuje oprogramowanie, którego naprawdę potrzebuje",
+        "item1":"",
+        "item2":"",
+        "item3":""
+      }
+    }
   }
+
 }

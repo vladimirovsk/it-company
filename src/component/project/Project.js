@@ -2,7 +2,7 @@ import React , {useState}from 'react';
 import clsx from 'clsx';
 import {Container} from 'react-bootstrap';
 import {Avatar, IconButton, Card, CardActions, CardHeader, Grid, Typography, CardContent, Button } from "@material-ui/core";
-//import {List, ListItem} from '@material-ui/core';
+import {List, ListItem} from '@material-ui/core';
 import Collapse from '@material-ui/core/Collapse';
 //import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -27,13 +27,10 @@ import './Project.css'
 
 
 const useStyles = makeStyles((theme) => ({
-  
   mt5:{ marginTop:theme.spacing(8)},
-
   projectCard:{
-
       //position:'absolute',
-      boxShadow: theme.shadows[10],
+      boxShadow: theme.shadows[15],
       borderRadius: 15,
       padding: '2em'
   },
@@ -42,20 +39,27 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: theme.shadows[10],
     },
     expand: {
-      outline: 'none',
-      WebkitTapHighlightColor: 'transparent',
+      //backgroundColor: theme.palette.secondary,
+      backgroundColor: '#f4511e',
+      //WebkitTapHighlightColor: 'transparent',
       transform: 'rotate(0deg)',
       marginLeft: 'auto',
+      //style={{ outline: '0', outlineOffset: '0', backgroundColor: '#f4511e'}}
       transition: theme.transitions.create('transform', {
         duration: theme.transitions.duration.shortest,
       }),
+       "&:hover":{
+        backgroundColor: '#F5683C',
+        boxShadow: theme.shadows[10],
+        },
+
     },
     expandOpen: {
-      WebkitTapHighlightColor: 'transparent',
+      //WebkitTapHighlightColor: 'transparent',
       outline: 'none',
       transform: 'rotate(180deg)',
-    },
-    
+      backgroundColor: '#f4511e',
+    }  
 }));
 
 function Project(props){
@@ -102,12 +106,11 @@ function raiseInvoiceClicked() {
 
   return(
       <Container id='project' fluid={'md'} className={'Project mt5'}>   
-
-                <Grid container style={{marginBottom: '2em', backgroundColor: 'transparent'}} className={classes.container} spacing={5} alignItems='center' justify='center' >
+                <Grid container style={{marginTop: '2em', marginBottom: '2em', backgroundColor: 'transparent'}} className={classes.container} spacing={5} alignItems='center' justify='center' >
                     {/** animatePreScroll={true} initiallyVisible={false}  */}
 {/*----Zero Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInUp' animateOnce={false}>
+                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true}>
                         <Card className={classes.projectCard}> 
                             <CardHeader 
                                 avatar={
@@ -133,6 +136,7 @@ function raiseInvoiceClicked() {
                             </CardContent>
                             <CardActions disableSpacing>
                                 <IconButton
+                                    disabled={true}
                                     id='0'
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded0,
@@ -140,50 +144,29 @@ function raiseInvoiceClicked() {
                                     onClick={handleExpandClick}
                                     aria-expanded={expanded1}
                                     aria-label="show more"
-                                    outline='none'
+                                    style={{ outline: '0', outlineOffset: '0'}}
                                     >
                                     <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
                                 <Collapse in={expanded0} timeout="auto" unmountOnExit>
-                                {/* <CardContent>
-                                    <Typography paragraph>{t('project.row0.colapseTitle')}</Typography>
-                                    <Typography paragraph>
-                                        <React.Fragment>
-                                            {t('project.row0.colapseText.row1')}
-                                        </React.Fragment>
-                                    </Typography>
-                                    <Typography paragraph>
-                                        {t('project.row0.colapseText.row2')}
-                                    </Typography>
-                                    <Typography paragraph>
-                                        {t('project.row0.colapseText.row3')}
-                                    </Typography>
-
+                                  <CardContent>
                                     <List>
-                                        <ListItem>
-                                            {t('project.row0.colapseText.item1')}
-                                        </ListItem>
-                                        <ListItem>
-                                            {t('project.row0.colapseText.item2')}
-                                        </ListItem>
-                                        <ListItem>
-                                            {t('project.row0.colapseText.item3')}
-                                        </ListItem>
-                                    </List>    
-                                    <Typography paragraph>
-                                        {t('project.row0.colapseText.row4')}
-                                    </Typography>
-                                    </CardContent> */}
-                                        </Collapse>
-                        </Card>    
+                                      <ListItem>
+                                      </ListItem>
+                                      <ListItem>
+                                      </ListItem>
+                                    </List>
+                                  </CardContent>
+                                </Collapse>
+                        </Card>
                         </ScrollAnimation>
-                    </Grid>                        
+                    </Grid>
 {/*----One Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInUp'  animateOnce={false}>
-                        <Card className={classes.projectCard}> 
-                            <CardHeader 
+                    <ScrollAnimation animateIn='animate__backInRight'  animateOnce={true}>
+                        <Card className={classes.projectCard}>
+                            <CardHeader
                                 avatar={
                                 <Avatar aria-label="recipe" className={classes.avatar}
                                     src={imgNodeJs}/>
@@ -203,7 +186,7 @@ function raiseInvoiceClicked() {
                                     </Grid>
                                     <Grid item md={10}>
                                         <Typography variant='body1' paragraph align='justify'>{t('project.row1.text')}</Typography>
-                                    </Grid>    
+                                    </Grid>
                                 </Grid>
                             </CardContent>
                             <CardActions disableSpacing>
@@ -211,6 +194,7 @@ function raiseInvoiceClicked() {
                                 {t('project.row1.documents')}
                                 </Button>
                                 <IconButton
+                                    disabled={true}
                                     id='1'
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded1,
@@ -218,19 +202,19 @@ function raiseInvoiceClicked() {
                                     onClick={handleExpandClick}
                                     aria-expanded={expanded1}
                                     aria-label="show more"
+                                    style={{ outline: '0', outlineOffset: '0'}}
                                     >
                                 <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
-                            
-                        </Card> 
-                    </ScrollAnimation>       
-                    </Grid>                        
-{/*----Two Cards --------------------------------*/}               
+                        </Card>
+                    </ScrollAnimation>
+                    </Grid>
+{/*----Two Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInUp' animateOnce={false}>
-                        <Card className={classes.projectCard}> 
-                        <CardHeader 
+                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true}>
+                        <Card className={classes.projectCard}>
+                        <CardHeader
                                 avatar={
                                 <Avatar aria-label="recipe" className={classes.avatar}
                                   src={imgDelphi}
@@ -251,11 +235,12 @@ function raiseInvoiceClicked() {
                                 </Grid>
                                 <Grid item md={10}>
                                     <Typography variant='body1' paragraph align='justify'>{t('project.row2.text')}</Typography>
-                                </Grid>    
-                            </Grid>  
-                        </CardContent>  
+                                </Grid>
+                            </Grid>
+                        </CardContent>
                         <CardActions disableSpacing>
                                 <IconButton
+                                    disabled={true}
                                     id='2'
                                     className={clsx(classes.expand, {
                                         [classes.expandOpen]: expanded2,
@@ -263,20 +248,20 @@ function raiseInvoiceClicked() {
                                     onClick={handleExpandClick}
                                     aria-expanded={expanded2}
                                     aria-label="show more"
+                                    style={{ outline: '0', outlineOffset: '0'}}
                                     >
                                 <ExpandMoreIcon />
                                 </IconButton>
                             </CardActions>
                         </Card>
-                      </ScrollAnimation>  
+                      </ScrollAnimation>
                     </Grid>
-                    
 {/*----Three Cards --------------------------------*/}
                     {/* <ScrollAnimation animateIn='animate__slideInUp' > */}
-                    <Grid item md={12} >     
-                    <ScrollAnimation animateIn='animate__slideInUp' animateOnce={false}>      
-                        <Card className={classes.projectCard}> 
-                        <CardHeader 
+                    <Grid item md={12} >
+                    <ScrollAnimation animateIn='animate__backInRight' animateOnce={true}>
+                        <Card className={classes.projectCard}>
+                        <CardHeader
                                 avatar={
                                 <Avatar aria-label="recipe" className={classes.avatar}
                                     src={imgArduino} />
@@ -295,8 +280,8 @@ function raiseInvoiceClicked() {
                                 </Grid>
                                 <Grid item md={10}>
                                     <Typography variant='body1' paragraph align='justify'>{t('project.row3.text')}</Typography>
-                                </Grid>    
-                            </Grid>    
+                                </Grid>
+                            </Grid>
                             </CardContent>
                             <CardActions disableSpacing>
                                 <IconButton
@@ -307,6 +292,7 @@ function raiseInvoiceClicked() {
                                     onClick={handleExpandClick}
                                     aria-expanded={expanded3}
                                     aria-label="show more"
+                                    style={{ outline: '0', outlineOffset: '0'}}
                                     >
                                 <ExpandMoreIcon />
                                 </IconButton>
@@ -317,7 +303,7 @@ function raiseInvoiceClicked() {
                                     <Grid container style={{padding:20}}>
                                     <Grid item>
                                             <Grid container >
-                                                <Grid item md={4}>                                
+                                                <Grid item md={4}>
                                                     <img style={{marginBottom:15, padding:10}} width={'80%'} src={imgUP1} alt='UP1'/>
                                                 </Grid>  
                                                 <Grid item md={8}>
@@ -342,18 +328,16 @@ function raiseInvoiceClicked() {
                         </ScrollAnimation>     
                     </Grid>
                     {/* </ScrollAnimation> */}
-                    
 {/*----Fourth Cards --------------------------------*/}
                     {/* <ScrollAnimation animateIn='animate__slideInUp'> */}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInUp' animateOnce={false}>      
-                        <Card className={classes.projectCard}> 
-                        <CardHeader 
+                    <ScrollAnimation animateIn='animate__backInLeft' animateOnce={true} >
+                        <Card className={classes.projectCard}>
+                        <CardHeader
                                 avatar={
                                 <Avatar aria-label="recipe" className={classes.avatar}
                                     src={imgDelphi}
                                 >
-                                
                                 </Avatar>
                                 }
                                 title = {t('project.row4.title')}
@@ -370,11 +354,10 @@ function raiseInvoiceClicked() {
                                 </Grid>
                                 <Grid item md={10}>
                                     <Typography variant='body1' paragraph align='justify'>{t('project.row4.text')}</Typography>
-                                </Grid>    
-                            </Grid> 
-                        </CardContent>   
+                                </Grid>
+                            </Grid>
+                        </CardContent>
                         <CardActions disableSpacing>
-                        
                                 <Button variant="outlined" size="small" color="secondary" onClick={raiseInvoiceClicked}>
                                 {t('project.row4.documents')}
                                 </Button>
@@ -386,6 +369,7 @@ function raiseInvoiceClicked() {
                                     onClick={handleExpandClick}
                                     aria-expanded={expanded4}
                                     aria-label="show more"
+                                    style={{ outline: '0', outlineOffset: '0'}}
                                     >
                                 <ExpandMoreIcon />
                                 </IconButton>
@@ -423,16 +407,10 @@ function raiseInvoiceClicked() {
                                     </CardContent>
                             </Collapse>
                         </Card>
-                       </ScrollAnimation> 
+                       </ScrollAnimation>
                     </Grid>
                     {/* </ScrollAnimation> */}
-                     
-
-                     
-                   
-                  </Grid >  
-                 
-
+                  </Grid >
       </Container>
   )
 }

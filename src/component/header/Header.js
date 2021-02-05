@@ -13,23 +13,25 @@ import './Header.css';
 
  const useStyles = makeStyles((theme) => ({
   buttonLng:{
-    ...theme.typography.button,
+    //...theme.typography.button,
     outline: 'none',
     width:'5em',
     height:"28px",
   },
 
   menu: {
-   //backgroundColor: theme.palette.common.primary,
+   backgroundColor: theme.palette.common.primary,
    color  : theme.typography.caption,//"black",
    borderRadius:'0px',
+  
    //"&:hover":{
    //color:"black",
    // },
   },
 
   menuItem:{
-   ...theme.typography.tab,
+    color  : theme.typography.caption,
+   //...theme.typography.tab,
    opacity:0.7,
    borderRadius:'0px',
   },
@@ -179,14 +181,16 @@ const Header = (props) => {
     const lngButton = (
       <React.Fragment>
         <Button 
-          // outline = 'none'
+
           // display = 'inline-block'
+          border = {0}
           hidden = {false}
           variant="contained"
           color="secondary"
           className={classes.buttonLng}
           onClick={handleClickLng}
           endIcon={<ArrowDropDownIcon/>}
+          style={{ outline: '0', outlineOffset: '0'}}
         >
           {getLanguage()}
         </Button>

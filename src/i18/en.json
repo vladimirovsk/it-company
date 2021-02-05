@@ -91,8 +91,6 @@
         } 
     }
   },
-
-
   "project": {
     
     "row0":{
@@ -186,5 +184,30 @@
     "city": "Krakow",
     "phone": "+48 791 329 376",
     "email":"sergey@itservis.od.ua"
+  },
+  "about": {
+
+    "text1": {
+      "row1" :"The development of modern applications implies the creation of a database that solves the issues of searching, structuring and organizing information, automating many processes. Without databases in the modern world, it is impossible to imagine the work of any application.",
+      "row2" : "Development of applications to work with the database, allow the business owner to have access to up-to-date information about the functioning of the entire organization",
+      "row3" : {
+        "title": "Database design and development is carried out in several stages:",
+        "item1":"The technical task is being specified;",
+        "item2":"A functioning example Database is being formed;",
+        "item3":"Filling the Database with reference information;"
+      }
+    },
+    
+    "text2": {
+      "row1": "Modern software development technology is tailored to the individual customer. A lot depends on the organization of the development process, the composition and qualifications of the development team's specialists, as well as the correct documentation of all software development processes.",
+      "row2": "Our experts will offer you consultations that will help you determine the requirements for the software that you need to develop. Together, we will develop the necessary terms of reference, and our specialists will implement it, with a phased implementation and testing in working conditions.",
+      "row3" : {
+        "title":"We will provide a decent level of software development, as well as a high-quality result. At the end of the work, the customer receives a software product that he really needs",
+        "item1":"",
+        "item2":"",
+        "item3":""
+      }
+    }
+    
   }
 }
