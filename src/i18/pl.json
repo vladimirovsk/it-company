@@ -1,18 +1,18 @@
 {
   "navbar": {
-    "glavn": "GŁÓWNA",
+    "glavn": "Głowna",
     "directory": "Katalogi",
-    "project": "NASZ PROJEKT",
+    "project": "Naszy projekty",
     "dashboard": "Dashboard",
     "cabinet": "Cabinet",
-    "kontact": "KONTACTY",
+    "kontact": "Kontakt",
     "login":"Wejście",
     "logout": "Wyjście",
-    "about": "O NAS"
+    "about": "O nas"
   },
   "deviz": {
-    "text1" :"Nasza praca jest naszym życiem",
-    "text2" :"Urzeczywistniamy Twoje pomysły"
+    "text1" :"WEBNIT",
+    "text2" :"Naszym życiem jest nasza praca"
   },
   
   "login": {
@@ -96,15 +96,15 @@
 
     "row0":{
       "title": "Strony internetowe",
-      "text": "Tworzymy strony od podstaw, korzystamy z nowych technologii i frameworków JavaScript, co pozwala nam pisać jasne i niepowtarzalne strony internetowe",
+      "text": "Tworzymy strony internetowe od podstaw przy użyciu nowych technologii i frameworków JavaScript. Pozwala to pisać żywe i unikalne strony internetowe.",
       "colapseText" : {
         "row1": "WebSite1",
         "row2": "WebSite2"
       }
      },
     "row1": {
-      "title": "Usługa płatności",
-      "text": "Usługa płatnicza ma na celu przyjmowanie płatności od ludności na rzecz usług użyteczności publicznej, działa na podstawie żądań REST",
+      "title": "Płatniczy serwis",
+      "text": "Płatniczy serwis jest przeznaczony dla przyjęcia spłat od ludności na korzyść komunalnych przedsiębiorstw, działa na podstawie żądań-REST",
       "documents":"Documentation",
       "colapseTitle":"Ogólny opis",
       "colapseText": {
@@ -119,37 +119,37 @@
       }
     },
     "row2": {
-      "title": "System płatności bankowych",
-      "text": "Oprogramowanie do realizacji możliwości opłacania składek w oddziałach bankowych, terminale płatnicze. Umożliwia pracę na bardzo słabych kanałach komunikacyjnych oraz zapewnia możliwość dokonywania płatności online bezpośrednio od płatnika do usługodawcy.",
+      "title": "Bankowy płatniczy system",
+      "text": "Bankowy płatniczy system - to oprogramowanie dla realizacji możliwości przyjęcia spłat w oddziałach banku i płatniczych terminalach. Pozwala pracować na bardzo słabych kanałach kontaktu,  zabezpiecza możliwość przeprowadzenia spłat online bezpośrednio od płatnika do dostawcy usług",
       "colapseText": {
-        "row1": "Zautomatyzowany system „Universal Payment System” przeznaczony jest do dokonywania płatności od osób fizycznych i prywatnych przedsiębiorców za różne usługi, płatności budżetowe różnych poziomów, cła, kary, rachunki za media, usługi komunikacyjne i inne.",
-        "row2": "The body of the device is made of plastic and is specially configured for installation in basements. The housing has a sealed outlet for the antenna and terminals for connecting the power supply.",
-        "row3": "The device is equipped with a battery that allows it to continue autonomous operation for 360 hours after disconnecting the external power supply. The UP is equipped with a microprocessor that is programmed individually for the customer, indicating the serial number of the heat meter."
+        "row1": "Automatyzowany system 'Uniwersalny płatniczy system' jest opracowany dla przeprowadzenia spłat od osób fizycznych i prywatnych przedsiębiorców za różne usługi, budżetowe spłaty różnych poziomów, cła, kary, komunalne spłaty, usługi związku itd.",
+        "row2": "Główną przewagą systemu jest jej uniwersalność w pracy z różnymi rodzajami spłat, pełna automatyzacja procesu pracy kasjera, co pozwoli unikać błędów w moment kształtowania spłaty",
+        "row3": "System działa w reżimie realnego czasu, co zabezpiecza stale aktualne dane i informatorów dla spełnienia spłat. Przy rozruchu systemu program automatycznie odnawia się, po tym otwiera się okno dla wejścia do systemu",
+        "row4": "Możliwość drukować rejestry i duplikaty kwitów za dowolną przemianę, w której były przeprowadzone spłaty",
+        "row5": "Posiadanie audytu wewnętrznego podczas pracy systemu w terenie w przekroju każdej otwartej zmiany"
       }
     },
     "row3": {
-      "title": "Modem do przesyłania informacji",
-      "text": "Projektowanie własnego układu elektronicznego, pełen zakres od produkcji urządzenia elektronicznego po uruchomienie, podłączenie połączenia modemowego z istniejącym systemem dyspozytorskim",
+      "title": "Modem przekazania informacji",
+      "text": "Zaprojektowanie własnego układu elektronicznego, pełny kompleks od wykonania urządzenia elektronicznego do uruchomienia, podłączenie komunikacji modemowej do obecnego systemu wysyłkowego.",
       "colapseTitle":"Ogólny opis",
       "colapseText": {
-        "row1": "Urządzenie do transmisji danych (UP) jest przeznaczone do pobierania informacji z mierników ciepła i przesyłania ich do centralnej bazy danych w celu dalszego przetwarzania i wizualizacji danych.",
-        "row2": "Korpus urządzenia wykonany jest z tworzywa sztucznego i jest specjalnie skonfigurowany do montażu w piwnicach. Obudowa posiada uszczelniony wyprowadzenie anteny oraz zaciski do zasilania.",
-        "row3": "System działa w czasie rzeczywistym, co zapewnia na bieżąco aktualne dane i podręczniki do dokonywania płatności w momencie startu systemu, program aktualizuje się automatycznie. Następnie otworzy się okno logowania.",
-        "row4": "Możliwość drukowania rejestrów i duplikatów paragonów dla każdej zmiany, w której dokonano płatności.",
-        "row5": "Audyt wewnętrzny pracy systemu w terenie w kontekście każdej otwartej zmiany."
+        "row1": "Urządzenie do przesyłania danych (UPC) przeznaczone jest do pobierania informacji z urządzeń do pomiaru ciepła i przesyłania ich do centralnej bazy danych w celu dalszego przetwarzania i wizualizacji danych",
+        "row2": "Obudowa urządzenia jest wykonana z tworzywa sztucznego i jest skonfigurowana specjalnie do instalacji w piwnicach. Na obudowie znajduje się szczelny przewód dla anteny i terminala do podłączenia zasilania.",
+        "row3": "Urządzenie jest wyposażone w akumulator, który pozwala mu kontynuować autonomiczną pracę przez 360 godzin po wyłączeniu zasilania zewnętrznego. UPC jest wyposażony w mikroprocesor, który jest programowany indywidualnie dla klienta ze wskazaniem numeru seryjnego urządzenia do pomiaru ciepła."
       }
 
     },
     "row4": {
       "documents":"Dokumentacja (rosyjski)",
-      "title": "Scentralizowany system przetwarzania informacji",
-      "text": "System umożliwia dostęp do bazy danych w tym samym czasie dużej liczbie użytkowników. Każdy użytkownik systemu ma swoją nazwę i hasło z pewnymi przywilejami dostępu do danych. W zwykłym przypadku pracownik przedsiębiorstwa może uzyskać dostęp do określonej części danych systemowych, wykonywać funkcje charakterystyczne dla swoich obowiązków i otrzymywać niezbędne raporty. Wielopoziomowy system do sprawdzania uprawnień użytkowników pozwala całkowicie zabezpieczyć system przed nieautoryzowanym dostępem.",
+      "title": "System centralizowanej obróbki informacji",
+      "text": "System daje możliwość dostępu do bazy danych jednocześnie dużej ilości użytkowników. Każdy użytkownik systemu ma własne imię i hasło z pewnymi przywilejami dostępu do danych. W zwyczajnym wypadku współpracownik przedsiębiorstwa może otrzymać dostęp do wskazanej części danych systemu, wykonywać charakterystyczne jego obowiązkom funkcji i otrzymywać konieczne sprawozdania. Wielostopniowy system sprawdzenia uprawnień użytkownika pozwala w całości obronić system od niesankcjonowanego dostępu.",
       "documents":"Dokumentacja (rosyjski)",
       "colapseTitle": "Centralized system of information processing - CISP",
       "colapseText":{
-        "row1": "Rachunkowość zasobów mieszkaniowych - podsystem ten zapewnia rozliczanie charakterystyk budynków mieszkalnych, innych obiektów i otoczenia, historię bieżących i kapitalnych remontów budynków i sieci inżynieryjnych.",
-        "row2": "Księgowość abonentów - podsystem ten zapewnia bezpośrednie wprowadzanie i przechowywanie wszystkich znaków i atrybutów abonentów, kontrolę poprawności wprowadzania danych, audyt wprowadzanych zmian oraz tworzenie formularzy raportowych. Zapewnia również wygodny interfejs do wyświetlania i wyszukiwania niezbędnych informacji o populacji.",
-        "row3": "Uwzględnianie poszczególnych urządzeń pomiarowych i ich odczytów. Podsystem ten zapewnia rozliczanie urządzeń (ich charakterystyki, miejsca instalacji, numery inwentarzowe, daty weryfikacji itp.). Zapewnia również ręczne wprowadzanie i automatyczne ładowanie informacji z banków i miejskich organizacji użyteczności publicznej zgodnie z odczytami liczników. System zapewnia wygodny interfejs do wyświetlania odczytów w kontekście abonentów z automatycznym wskazaniem błędnie wprowadzonych danych.",
+        "row1": "Ewidencja mieszkalnego funduszu - ten podsystem zabezpiecza ewidencję charakterystyk budynków mieszkalnych, innych obiektów i pobliskiego terytorium, historię przeprowadzonych potocznych i kapitalnych remontów budowli inżenierskich sieci.",
+        "row2": "Ewidencja abonentów - ten podsystem zabezpiecza bezpośrednio wprowadzenie i przechowywanie wszystkich oznak i atrybutów abonentów, kontrolę poprawności wprowadzenia danych, audyt wprowadzonych przemian i kształtowanie sprawozdawczych form. A także zabezpiecza wygodny interfejs dla odzwierciedlenia i poszukiwania koniecznej informacji po ludności.",
+        "row3": "Ewidencja indywidualistycznych przyrządów ewidencji i ich świadczeń. Ten podsystem zabezpiecza ewidencję przyrządów (ich charakterystyki, miejsca ustawień, inwentarzowe numery, daty sprawdzeń i tak dalej). Również zabezpiecza ręczne wprowadzenie i automatyczne ładowanie informacji od banków i miejskich organizacji po obsłudze ludności za świadczeniami przyrządów ewidencji. System zapewnia wygodny interfejs do wyświetlania odczytów w przekroju abonentów z automatycznym wskazaniem błędnie wprowadzonych danych.",
         "row4": "I wiele więcej...",
         "row5": ""
       }
@@ -159,7 +159,7 @@
   },
   "contact": {
     "sergey": {
-      "fio": "Serghiy Vladimirov",
+      "fio": "Sergey Vladimirov",
       "text": "Programista z dużym doświadczeniem w zakresie infrastruktury IT, tworzenia profesjonalnego oprogramowania, integracji aplikacji, doradztwa informatycznego, testowania, utrzymania i wsparcia oprogramowania.",
       "phone": "",
       "email": ""
@@ -193,27 +193,27 @@
     "city": "m. Krakow",
     "phone": "+48 791 329 376",
     "viber": "+48 791 329 376",
-    "telegram":"+38(097)599-65-60",
+    "telegram":"+48 791 329 376",
     "skype": "vladimirov_sk",
     "email":"sergey@itservis.od.ua"
   },
   "about": {
     "text1": {
-      "row1" :"Rozwój nowoczesnych aplikacji implikuje tworzenie bazy danych, która rozwiązuje problemy wyszukiwania, strukturyzacji i porządkowania informacji, automatyzując wiele procesów. Bez baz danych we współczesnym świecie nie sposób wyobrazić sobie działania jakiejkolwiek aplikacji.",
-      "row2" : "Rozwój aplikacji do pracy z bazą danych, daje właścicielowi firmy dostęp do aktualnych informacji o funkcjonowaniu całej organizacji",
+      "row1" :"Rozwój nowoczesnych aplikacji polega na tworzeniu bazy danych, które rozwiązują problemy wyszukiwania, strukturyzacji i porządkowania informacji, automatyzują wiele procesów. Bez baz danych w dzisiejszym świecie, nie jest możliwe, aby wyobrazić sobie działanie jednej aplikacji.",
+      "row2" : "Tworzenie aplikacji do pracy z bazą danych umożliwiają właścicielowi firmy dostęp do aktualnych informacji o funkcjonowaniu całej organizacji",
       "row3" : {
-        "title": "Projektowanie i tworzenie bazy danych odbywa się w kilku etapach:",
-        "item1":"Zadanie techniczne zostało wyjaśnione;",
-        "item2":"Tworzona jest działająca przykładowa baza danych;",
-        "item3":"Wypełnianie bazy danych informacjami referencyjnymi;"
+        "title": "Projektowanie i rozwój bazy danych odbywa się w kilku etapach:",
+        "item1":"Doprecyzowane zadanie techniczne;",
+        "item2":"Powstaje funkcjonujący przykład bazy danych;",
+        "item3":"Wypełnianie bazy danych informacjami pomocniczymi;"
       }
       
     },
     "text2": {
-      "row1": "Nowoczesna technologia tworzenia oprogramowania dostosowana jest do indywidualnego klienta. Wiele zależy od organizacji procesu wytwarzania oprogramowania, składu i kwalifikacji specjalistów z zespołu programistów, a także od poprawnej dokumentacji wszystkich procesów wytwarzania oprogramowania.",
-      "row2": "Nasi eksperci udzielą Ci konsultacji, które pomogą Ci określić wymagania dotyczące oprogramowania, które musisz opracować. Wspólnie opracujemy niezbędne specyfikacje techniczne, a nasi specjaliści wdrożą je, etapowo wdrażając i testując w warunkach pracy.",
+      "row1": "Nowoczesna technologia tworzenia oprogramowania skierowana jest do indywidualnego klienta. Wiele zależy od organizacji procesu rozwoju, składu i kwalifikacji specjalistów zespołu programistów, a także prawidłowego udokumentowania wszystkich procesów tworzenia oprogramowania.",
+      "row2": "Nasi specjaliści oferują porady, które pomogą Ci określić wymagania dotyczące oprogramowania, które musisz opracować. Wspólnie opracujemy niezbędne zadanie techniczne, a nasi specjaliści wdrożą je w życie, z etapowym wdrażaniem i testowaniem w warunkach pracy.",
       "row3" : {
-        "title":"Zapewnimy przyzwoity poziom rozwoju oprogramowania, a także wysokiej jakości wynik. Na koniec pracy klient otrzymuje oprogramowanie, którego naprawdę potrzebuje",
+        "title":"Zapewnimy przyzwoity poziom rozwoju oprogramowania, a także wynik wysokiej jakości. Klient pod koniec pracy otrzymuje oprogramowanie, którego naprawdę potrzebuje.",
         "item1":"",
         "item2":"",
         "item3":""

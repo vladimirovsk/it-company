@@ -1,6 +1,15 @@
 .Project {
-
-  background-color:transparent;
+  font-family: 'Raleway', sans-serif;
+  background-color: #202020;
   color:black;
 }
 
+
+.myText {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.CardHeader{
+  font-family: 'Raleway', sans-serif;
+}

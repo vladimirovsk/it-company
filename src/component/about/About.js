@@ -11,8 +11,8 @@ import db from '../../assets/img/DatabaseDesign2.jpg'
 function About(props){
   const [{t}] = React.useState(props);
   return(
-      <Container id='about' fluid={true} className={'About'}>
-       <Row >
+      <Container id='about' fluid={true} className={'About'} >
+       <Row style={{fontFamily: 'Raleway'}}>
           <Col className='Grid' xs={0} md={12} lg={6} style={{
                 backgroundImage: `url(${db})`,
                 backgroundPosition: 'center',
@@ -22,28 +22,29 @@ function About(props){
           <Col className='Grid' xs={12} md={12} lg={6} style={{
             padding : '2em',
             lineHeight : 1.5,
-            backgroundColor:'whitesmoke',
-            color: 'black',
-            textAlign: 'justify-context'
+            backgroundColor:'#202020',
+            color: 'white',
+            textAlign: 'justify-context',
+            fontFamily: 'Raleway'
             }}>
-                <Typography variant='body1' paragraph align='justify' >
+                <Typography variant='body1' paragraph align='justify' style={{fontFamily: 'Raleway'}} >
                 {t('about.text1.row1')}
                 </Typography>
 
-                <Typography variant='body1' paragraph align='justify'>
+                <Typography variant='body1' paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                 {t('about.text1.row2')}
                 </Typography>
 
-                <Typography variant='body1' paragraph align='justify'>
+                <Typography variant='body1' paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                 {t('about.text1.row3.title')}
                 </Typography>
-                <Typography component='li' variant='body1' align='justify'>
+                <Typography component='li' variant='body1' align='justify' style={{fontFamily: 'Raleway'}}>
                 {t('about.text1.row3.item1')}
                 </Typography>
-                <Typography component='li' variant='body1' align='justify'>
+                <Typography component='li' variant='body1' align='justify' style={{fontFamily: 'Raleway'}}>
                 {t('about.text1.row3.item2')}
                 </Typography>
-                <Typography component='li' variant='body1' align='justify'>
+                <Typography component='li' variant='body1' align='justify' style={{fontFamily: 'Raleway'}}>
                 {t('about.text1.row3.item3')}
                 </Typography>
 
@@ -52,17 +53,18 @@ function About(props){
           <Col className='Grid' xs={12} md={12} lg={6} style={{
             padding : '2em',
             
-            backgroundColor:'whitesmoke',
-            color: 'black',
-            textAlign: 'justify-context'
+            backgroundColor:'#202020',
+            color: 'white',
+            textAlign: 'justify-context',
+            fontFamily: 'Raleway'
             }}>
-              <Typography variant='body1' paragraph={true}  align='justify' style={{lineHeight:'1.8'}}>
+              <Typography variant='body1' paragraph={true}  align='justify' style={{lineHeight:'1.8', fontFamily: 'Raleway'}}>
                 {t('about.text2.row1')}
               </Typography>
-              <Typography variant='body1' paragraph align='justify' style={{lineHeight:'1.8'}}>
+              <Typography variant='body1' paragraph align='justify' style={{lineHeight:'1.8', fontFamily: 'Raleway'}}>
                 {t('about.text2.row2')}
               </Typography>
-              <Typography variant='body1' paragraph align='justify' style={{lineHeight:'1.8'}}>
+              <Typography variant='body1' paragraph align='justify' style={{lineHeight:'1.8', fontFamily: 'Raleway'}}>
                 {t('about.text2.row3.title')}
               </Typography>
           </Col>

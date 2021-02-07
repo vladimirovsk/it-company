@@ -2,6 +2,7 @@
   /* height: 30em; */
   background-color: #555454;
   color:rgb(2, 2, 2);
+  font-family: 'Raleway';
 }
 
 .CardContact{
@@ -45,18 +46,10 @@
   box-shadow: 0 0 20px #343434;
 }
 
-.TestObject {
-    position: relative;
-    color: red;
-    border-color: green; 
-    border-width: 2px;
-    border-style: solid;
-    margin:10px;
-}
 
 
 .fullscreen_contact {
-  font-family: 'Crete Round', sans-serif;
+  /* font-family: 'Crete Round', sans-serif; */
   z-index: 2;
   position: relative;
   max-width: 1400px;

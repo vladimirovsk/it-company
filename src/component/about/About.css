@@ -1,13 +1,14 @@
 .About {
-  
-  background-color: darkgrey;
+  font-family: 'Raleway';
+  background-color: #202020;
 }
 
 .Grid{
   position: relative;
   height: 30em;
   color:white;
-  border-color: whitesmoke; 
-  border-width: 0px;
-  border-style: solid;
+  }
+
+  .myText{
+    font-family: 'Raleway'; 
   }

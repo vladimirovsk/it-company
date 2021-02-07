@@ -1,17 +1,17 @@
 {
   "navbar": {
-    "glavn": "HOME",
+    "glavn": "Home",
     "directory": "Directory",
-    "project": "PROJECT",
+    "project": "Project",
     "dashboard": "Dashboard",
-    "kontact": "CONTACT",
+    "kontact": "Contact",
     "login":"Login",
     "logout":"Logout",
-    "about": "ABOUT"
+    "about": "About"
   },
   "deviz":{
-    "text1":"Our work is our life",
-    "text2" : "We turn your ideas into reality"
+    "text1":"WEBNIT",
+    "text2" : "Our work is our life"
   },
   
   "login": {

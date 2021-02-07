@@ -15,15 +15,14 @@ import './Header.css';
   buttonLng:{
     //...theme.typography.button,
     outline: 'none',
-    width:'5em',
-    height:"28px",
+    // width:'5em',
+    // height:"28px",
   },
 
   menu: {
    backgroundColor: theme.palette.common.primary,
    color  : theme.typography.caption,//"black",
    borderRadius:'0px',
-  
    //"&:hover":{
    //color:"black",
    // },
@@ -32,7 +31,7 @@ import './Header.css';
   menuItem:{
     color  : theme.typography.caption,
    //...theme.typography.tab,
-   opacity:0.7,
+   opacity: 1,
    borderRadius:'0px',
   },
 
@@ -215,7 +214,7 @@ const Header = (props) => {
     )
 
     return (
-      <Navbar collapseOnSelect sticky="top" expand="lg" className='navbar'>
+      <Navbar collapseOnSelect fixed="top" expand="lg" className='navbar'>
         {/* <div className='container'> */}
          {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -223,7 +222,7 @@ const Header = (props) => {
           <Nav>
             <Nav><Link 
               onClick={autoClose}
-              activeClass="msactive"
+               activeClass="msactive"
               to="home"
               spy={true}
               href="#home"
@@ -233,7 +232,7 @@ const Header = (props) => {
               className='nav-link'>{t('navbar.glavn')}</Link></Nav>
             <Nav><Link 
               onClick={autoClose}
-              activeClass="msactive"
+               activeClass="msactive"
               to="project"
               spy={true}
               href="#project"
@@ -243,7 +242,7 @@ const Header = (props) => {
               className='nav-link'>{t('navbar.project')}</Link></Nav>
             <Nav><Link  
               onClick={autoClose}
-              activeClass="msactive"
+               activeClass="msactive"
               to="contact"
               spy={true}
               href="#contact"
@@ -252,6 +251,7 @@ const Header = (props) => {
               duration={800}
               className='nav-link'>{t('navbar.kontact')}</Link></Nav>
             <Nav><Link 
+              activeClass="msactive"
               onClick={autoClose}
               to="about"
               spy={true}

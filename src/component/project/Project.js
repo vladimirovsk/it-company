@@ -11,10 +11,10 @@ import {translate} from "react-switch-lang";
 
 import restApi from '../../assets/img/REST_API.png'; 
 import imgNit from '../../assets/img/nit.png'; 
-import avr from '../../assets/img/AVR.jpeg'; 
-import gkh from '../../assets/img/GKH.jpg'; 
-import imgNodeJs from '../../assets/img/nodejs.png'
-import imgArduino from '../../assets/img/arduino2.png'
+import avr from '../../assets/img/AVR.png'; 
+import gkh from '../../assets/img/GKH.png'; 
+import imgNodeJs from '../../assets/img/node.png'
+import imgArduino from '../../assets/img/arduino.png'
 import imgDelphi from '../../assets/img/delphi.png'
 import imgUP1 from '../../assets/img/atmega.jpg'
 import impReact from '../../assets/img/react.png'
@@ -32,16 +32,21 @@ import './Project.css'
 
 
 const useStyles = makeStyles((theme) => ({
-  mt5:{ marginTop:theme.spacing(8)},
+  root: {
+    fontFamily: 'Raleway'
+  } ,
+
+
   projectCard:{
-      //position:'absolute',
-      boxShadow: theme.shadows[15],
+    //   position:'absolute',
+      boxShadow: theme.shadows[10],
+      fontFamily: 'Raleway',
       borderRadius: 15,
-      padding: '2em'
   },
   avatar: {
-      backgroundColor: theme.palette.common.colorSecondary,
+      backgroundColor: '#202020',//theme.palette.common.colorSecondary,
       boxShadow: theme.shadows[10],
+      fontFamily: 'Raleway'
     },
     expand: {
       //backgroundColor: theme.palette.secondary,
@@ -64,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       outline: 'none',
       transform: 'rotate(180deg)',
       backgroundColor: '#f4511e',
-    }  
+    }
 }));
 
 function Project(props){
@@ -119,14 +124,30 @@ function openPymentSystem() {
 
 
   return(
-      <Container id='project' fluid={'md'} className={'Project mt5'}>   
-                <Grid container style={{marginTop: '2em', marginBottom: '2em', backgroundColor: 'transparent'}} className={classes.container} spacing={5} alignItems='center' justify='center' >
-                    {/** animatePreScroll={true} initiallyVisible={false}  */}
+    <Container fluid={true} style={{backgroundColor:'#202020'}}>  
+      <Container id='project' fluid={true} className={'Project'}>   
+            <Grid container 
+                style={{
+                    height: '100%',
+                    left: 0,
+                    top: 0,
+                    marginRight: '2em',
+                    padding: '0em',
+                    paddingTop: '2em', 
+                    paddingBottom: '2em', 
+                    backgroundColor: '#202020',
+                    fontFamily: 'Raleway'
+                    }} 
+                    
+                    spacing={2} 
+                    alignItems='center' 
+                    justify='center' 
+    >
 {/*----Zero Cards --------------------------------*/}
-                    <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
+                    <Grid item md={12}>
+                        <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
                         <Card className={classes.projectCard}> 
-                            <CardHeader 
+                            <CardHeader style={{fontFamily: "Raleway"}}
                                 avatar={
                                 <Avatar aria-label="recipe" className={classes.avatar}
                                     src={impReact}/>
@@ -138,13 +159,15 @@ function openPymentSystem() {
                                         </IconButton>
                                 }*/
                             />
-                            <CardContent>
+                            <CardContent style={{fontFamily: "'Raleway', sans-serif"}}>
                                 <Grid container direction='row'>
                                     <Grid item md={2}>
                                         <img  width={160} height={100} alt={t('project.row0.title')} className="mr-3" src={webdesign} />
                                     </Grid>
                                     <Grid item md={10}>
-                                        <Typography variant='body1' paragraph align='justify'>{t('project.row0.text')}</Typography>
+                                        <Typography className='myText' variant='body1' paragraph align='justify' 
+                                        style={{fontFamily: 'Raleway'}}
+                                        >{t('project.row0.text')}</Typography>
                                     </Grid>    
                                 </Grid>
                             </CardContent>
@@ -178,7 +201,7 @@ function openPymentSystem() {
                     </Grid>
 {/*----One Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInRight'  animateOnce={true}>
+                        <ScrollAnimation animateIn='animate__slideInRight'  animateOnce={true}>
                         <Card className={classes.projectCard}>
                             <CardHeader
                                 avatar={
@@ -199,7 +222,9 @@ function openPymentSystem() {
                                         <img  width={150} height={110} alt={t('project.row1.title')} className="mr-3" src={restApi} />
                                     </Grid>
                                     <Grid item md={10}>
-                                        <Typography variant='body1' paragraph align='justify'>{t('project.row1.text')}</Typography>
+                                        <Typography variant='body1' paragraph align='justify'
+                                        style={{fontFamily: 'Raleway'}}
+                                        >{t('project.row1.text')}</Typography>
                                     </Grid>
                                 </Grid>
                             </CardContent>
@@ -226,7 +251,7 @@ function openPymentSystem() {
                     </Grid>
 {/*----Two Cards --------------------------------*/}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
+                        <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true}>
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -248,7 +273,9 @@ function openPymentSystem() {
                                     <img  width={160} height={120} alt={t('project.row2.title')} className="mr-3" src={imgNit} style={{padding:10}}/>
                                 </Grid>
                                 <Grid item md={10}>
-                                    <Typography variant='body1' paragraph align='justify'>{t('project.row2.text')}</Typography>
+                                    <Typography variant='body1' paragraph align='justify'
+                                    style={{fontFamily: 'Raleway'}}
+                                    >{t('project.row2.text')}</Typography>
                                 </Grid>
                             </Grid>
                         </CardContent>
@@ -272,7 +299,9 @@ function openPymentSystem() {
                             </CardActions>
                             <Collapse in={expanded2} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                <Typography variant='h5' align='center'>{t('project.row4.colapseTitle')}</Typography>
+                                <Typography variant='h5' align='center' 
+                                style={{fontFamily: 'Raleway'}}
+                                >{t('project.row4.colapseTitle')}</Typography>
                                     <Grid container style={{padding:20}}>
                                     <Grid item>
                                             <Grid container >
@@ -283,19 +312,19 @@ function openPymentSystem() {
                                                 </Grid>  
                                                 <Grid item md={8}>
                                                     <ul>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row2.colapseText.row1')}</li>
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row2.colapseText.row2')}</li>
                                                     </Typography> 
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row2.colapseText.row3')}</li>
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row2.colapseText.row4')}</li>
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row2.colapseText.row5')}</li>
                                                     </Typography>
                                                     </ul>
@@ -309,9 +338,8 @@ function openPymentSystem() {
                       </ScrollAnimation>
                     </Grid>
 {/*----Three Cards --------------------------------*/}
-                    {/* <ScrollAnimation animateIn='animate__slideInUp' > */}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInRight' animateOnce={true}>
+                        <ScrollAnimation animateIn='animate__slideInRight' animateOnce={true}>
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -331,7 +359,9 @@ function openPymentSystem() {
                                     <img  width={150} height={130} alt={t('project.row3.title')} className="mr-3" src={avr} />
                                 </Grid>
                                 <Grid item md={10}>
-                                    <Typography variant='body1' paragraph align='justify'>{t('project.row3.text')}</Typography>
+                                    <Typography variant='body1' paragraph align='justify'
+                                    style={{fontFamily: 'Raleway'}}
+                                    >{t('project.row3.text')}</Typography>
                                 </Grid>
                             </Grid>
                             </CardContent>
@@ -351,7 +381,9 @@ function openPymentSystem() {
                             </CardActions>
                             <Collapse in={expanded3} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography variant='h5' align='center'>{t('project.row3.colapseTitle')}</Typography>
+                                    <Typography variant='h5' align='center'
+                                    style={{fontFamily: 'Raleway'}}
+                                    >{t('project.row3.colapseTitle')}</Typography>
                                     <Grid container style={{padding:20}}>
                                     <Grid item>
                                             <Grid container >
@@ -359,13 +391,13 @@ function openPymentSystem() {
                                                     <img style={{marginBottom:15, padding:10}} width={'80%'} src={imgUP1} alt='UP1'/>
                                                 </Grid>  
                                                 <Grid item md={8}>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         {t('project.row3.colapseText.row1')}
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         {t('project.row3.colapseText.row2')}
                                                     </Typography> 
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         {t('project.row3.colapseText.row3')}
                                                     </Typography>
                                                 </Grid>
@@ -379,11 +411,9 @@ function openPymentSystem() {
                         </Card>
                         </ScrollAnimation>     
                     </Grid>
-                    {/* </ScrollAnimation> */}
 {/*----Fourth Cards --------------------------------*/}
-                    {/* <ScrollAnimation animateIn='animate__slideInUp'> */}
                     <Grid item md={12} >
-                    <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true} >
+                        <ScrollAnimation animateIn='animate__slideInLeft' animateOnce={true} >
                         <Card className={classes.projectCard}>
                         <CardHeader
                                 avatar={
@@ -405,7 +435,9 @@ function openPymentSystem() {
                                     <img  width={150} height={150} alt={t('project.row4.title')} className="mr-3" src={gkh} />
                                 </Grid>
                                 <Grid item md={10}>
-                                    <Typography variant='body1' paragraph align='justify'>{t('project.row4.text')}</Typography>
+                                    <Typography variant='body1' paragraph align='justify'
+                                    style={{fontFamily: 'Raleway'}}
+                                    >{t('project.row4.text')}</Typography>
                                 </Grid>
                             </Grid>
                         </CardContent>
@@ -428,7 +460,7 @@ function openPymentSystem() {
                             </CardActions>
                             <Collapse in={expanded4} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                <Typography variant='h5' align='center'>{t('project.row4.colapseTitle')}</Typography>
+                                <Typography variant='h5' align='center' style={{fontFamily: 'Raleway'}}>{t('project.row4.colapseTitle')}</Typography>
                                     <Grid container style={{padding:20}}>
                                     <Grid item>
                                             <Grid container >
@@ -438,16 +470,16 @@ function openPymentSystem() {
                                                 </Grid>  
                                                 <Grid item md={8}>
                                                     <ul>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row4.colapseText.row1')}</li>
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row4.colapseText.row2')}</li>
                                                     </Typography> 
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row4.colapseText.row3')}</li>
                                                     </Typography>
-                                                    <Typography paragraph align='justify'>
+                                                    <Typography paragraph align='justify' style={{fontFamily: 'Raleway'}}>
                                                         <li>{t('project.row4.colapseText.row4')}</li>
                                                     </Typography>
                                                     </ul>
@@ -460,9 +492,9 @@ function openPymentSystem() {
                         </Card>
                        </ScrollAnimation>
                     </Grid>
-                    {/* </ScrollAnimation> */}
-                  </Grid >
+        </Grid >
       </Container>
+  </Container>    
   )
 }
 

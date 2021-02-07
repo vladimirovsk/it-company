@@ -8,10 +8,12 @@ import fb from '../../assets/img/fb.png';
 
 function Footer(){
   return(
-      <Container id='footer' fluid={true} className='Footer'>
-        <Row> 
-          <Col lg={3}  sm={12} className='Grid_footer text-left'>
-          <div className='Grid_footer_title text-center'>PROGRAMMING</div>
+    <Container fluid={true} style={{fontFamily: 'Raleway' ,backgroundColor:'#000'}}>
+      <Container id='footer' fluid={'sm'} className='Footer pt-5' >
+        <Row>
+
+          <Col sm={12}  md={4} className='Grid_footer text-left'>
+          <div className='Grid_footer_title text-left'>PROGRAMMING</div>
           <ul>
               <li>Database Design </li>
               <li>WEB page development</li>
@@ -20,8 +22,8 @@ function Footer(){
             </ul>
           </Col>
           
-          <Col lg={3}  sm={12}  className='Grid_footer float-left'>
-          <div className='Grid_footer_title text-center'>CONTACT</div>
+          <Col sm={12}  md={4} className='Grid_footer float-left'>
+          <div className='Grid_footer_title text-left'>CONTACT</div>
           <ul>
               <li>31-153 Kraków, </li>
               <li>ul. Szlak 77/222</li>
@@ -29,30 +31,32 @@ function Footer(){
               <li>tel: <a href="tel:+48881515691" style={{color: 'white'}} >+48 881 515 691</a></li>
             </ul>
           </Col>
-          <Col lg={3}  sm={12}  className='Grid_footer'>
-          <div className='Grid_footer_title text-center'>SOCIAL</div>
+
+          <Col sm={12}  md={4} className='Grid_footer'>
+          <div className='Grid_footer_title text-left'>SOCIAL</div>
           <ul>
           <li><a href="https://www.facebook.com/itvladimirov" 
               style={{color: 'white'}} target= "_blank" rel= "noopener noreferrer">
             <img src={fb} alt='fb' height='40' style={{marginRight: '10px'}}/ >
             webnit.pl
             </a>
-          </li>
-            
+          </li>  
           </ul>
           </Col>
-          <Col lg={3} sm={12}  className='Grid_footer'>
+
+          {/* <Col lg={3} sm={12}  className='Grid_footer'>
           <div className='Grid_footer_title text-center'>PARTHERS</div>
 
-          </Col>
+          </Col> */}
         </Row>  
         <Row>
-          <Col className='Grid_footer_copyright'>
+          <Col md={12} className='Grid_footer_copyright'>
             <p>Copyright &copy; 2021 by <a href='/' >Web NIT </a></p>
                     {/* <p>Nasza strona wykorzystuje pliki cookie. 
                       <a href="polityka_prywatnosci.html">Polityka prywatności</a></p> */}
           </Col>
         </Row>  
+      </Container>
       </Container>
   )
 }

@@ -29,7 +29,7 @@ function App(props) {
         <Project /> 
         <Contact />
         <About />
-        <Footer />
+         <Footer /> 
       </div>
 
   );
