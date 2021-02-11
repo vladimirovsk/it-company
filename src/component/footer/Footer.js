@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css'
 import fb from '../../assets/img/fb.png';
+import inst from '../../assets/img/insta.png';
 
 
 
@@ -27,20 +28,28 @@ function Footer(){
           <ul>
               <li>31-153 Kraków, </li>
               <li>ul. Szlak 77/222</li>
-              <li>email: <a href="mailto:lisa@webnit.pl?subject=From Web page WebNit&amp;body=Hello, " style={{color: 'white'}} >lisa@webnit.pl</a></li>
+              <li>mail: <a href="mailto:lisa@webnit.pl?subject=From Web page WebNit&amp;body=Hello, " style={{color: 'white'}} >lisa@webnit.pl</a></li>
               <li>tel: <a href="tel:+48881515691" style={{color: 'white'}} >+48 881 515 691</a></li>
+              
             </ul>
           </Col>
 
           <Col sm={12}  md={4} className='Grid_footer'>
           <div className='Grid_footer_title text-left'>SOCIAL</div>
-          <ul>
-          <li><a href="https://www.facebook.com/itvladimirov" 
+          
+          <ul >
+          <li style={{marginBottom: '5px'}}><a href="https://www.facebook.com/itvladimirov" 
               style={{color: 'white'}} target= "_blank" rel= "noopener noreferrer">
             <img src={fb} alt='fb' height='40' style={{marginRight: '10px'}}/ >
-            webnit.pl
+            facebook.com
             </a>
           </li>  
+          <li style={{marginBottom: '5px'}}><a href="https://instagram.com/webnit.pl?igshid=152ri1pfvwmps"
+              yle={{color: 'white'}} target= "_blank" rel= "noopener noreferrer">
+            <img src={inst} alt='fb' height='40' style={{marginRight: '10px'}}/ >
+            instagram.com
+            </a>
+          </li>
           </ul>
           </Col>
 
