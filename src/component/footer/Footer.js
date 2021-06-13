@@ -30,6 +30,7 @@ function Footer(){
               <li>ul. Szlak 77/222</li>
               <li>mail: <a href="mailto:lisa@webnit.pl?subject=From Web page WebNit&amp;body=Hello, " style={{color: 'white'}} >lisa@webnit.pl</a></li>
               <li>tel: <a href="tel:+48881515691" style={{color: 'white'}} >+48 881 515 691</a></li>
+              <li>NIP: 9452241540</li>
               
             </ul>
           </Col>

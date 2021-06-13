@@ -27,7 +27,7 @@ function App(props) {
         <Header />
         <Title />
         <Project /> 
-        <Contact />
+        {/* <Contact /> */}
         <About />
          <Footer /> 
       </div>

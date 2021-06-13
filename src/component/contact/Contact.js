@@ -55,7 +55,6 @@ function Contact(props) {
   return(
 
       <Container id='contact' fluid={true} className={'Contact'} >
-       {/* <div className='contact_out _anim-item'> */}
          <Row>
            <Col md={2}/>
            <Col md={4}> 
